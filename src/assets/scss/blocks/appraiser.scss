@@ -1,0 +1,104 @@
+.appraiser {
+  @include viewport--768 {
+    padding: 90px 20px 0;
+  }
+
+  @include viewport--1200 {
+    display: none;
+  }
+
+  padding: 60px 20px 0;
+}
+
+.appraiser__wrapper {
+  @include viewport--768 {
+    padding: 40px 130px 391px 40px;
+  }
+  position: relative;
+
+  padding: 20px;
+  padding-bottom: 253px;
+  overflow: hidden;
+
+  background-color: $color-grey-light;
+  border-radius: 20px;
+
+  &::after {
+    @include viewport--768 {
+      bottom: -195px;
+      left: -53px;
+
+      width: 544px;
+      height: 544px;
+    }
+    position: absolute;
+    bottom: -74px;
+    left: -54px;
+    z-index: 0;
+
+    width: 297px;
+    height: 297px;
+
+    background-color: $color-red;
+    border-radius: 50%;
+
+    content: '';
+  }
+
+  &::before {
+    @include viewport--768 {
+      bottom: 48px;
+      left: 104px;
+
+      width: 448px;
+      height: 261px;
+    }
+    position: absolute;
+    bottom: 22px;
+    left: 43px;
+    z-index: 1;
+
+    width: 277px;
+    height: 172px;
+
+    background-image: url('../img/bg/bg-auto2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    content: '';
+  }
+}
+
+.appraiser__title {
+  @include viewport--768 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+  }
+  margin: 0;
+  margin-bottom: 31px;
+
+  font-weight: 700;
+  font-size: 24px;
+
+  font-family: 'Georgia', sans-serif;
+  line-height: 122%;
+}
+
+.appraiser__paragraph {
+  margin-bottom: 15px;
+
+  color: $color-grey;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 128%;
+  letter-spacing: -0.004em;
+}
+
+.appraiser__btn {
+  @include viewport--768 {
+    width: 228px;
+  }
+
+  margin-top: 14px;
+}

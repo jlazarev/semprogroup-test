@@ -1,0 +1,59 @@
+{
+    "private": true,
+    "type": "module",
+    "name": "kazna-api",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "gulp",
+        "build": "gulp build --production",
+        "build-images": "gulp build --production --images",
+        "stylelint": "gulp styleLint",
+        "stylelint:fix": "gulp styleLintFix",
+        "test-build": "gulp serve --build",
+        "prettier": "prettier --write src/ && gulp styleLintFix"
+    },
+    "author": "tprs",
+    "license": "ISC",
+    "browserslist": [
+        "last 2 years",
+        "> 1%",
+        "IE 11",
+        "Firefox ESR",
+        "not dead"
+    ],
+    "engines": {
+        "node": ">=18",
+        "pnpm": ">=7"
+    },
+    "devDependencies": {
+        "autoprefixer": "10.4.16",
+        "browser-sync": "2.29.3",
+        "cssnano": "6.0.1",
+        "del": "7.1.0",
+        "editorconfig": "2.0.0",
+        "gulp": "4.0.2",
+        "gulp-clean-css": "4.3.0",
+        "gulp-file-include": "^2.3.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-if": "3.0.0",
+        "gulp-imagemin": "7.1.0",
+        "gulp-plumber": "1.2.1",
+        "gulp-postcss": "9.0.1",
+        "gulp-rename": "2.0.0",
+        "gulp-replace": "^1.1.4",
+        "gulp-sass": "5.1.0",
+        "gulp-sourcemaps": "3.0.0",
+        "gulp-stylelint-esm": "^1.0.0",
+        "gulp-svgstore": "^9.0.0",
+        "gulp-webp": "^4.0.1",
+        "postcss": "8.4.31",
+        "prettier": "3.0.3",
+        "sass": "^1.69.3",
+        "stylelint": "15.11.0",
+        "stylelint-config-rational-order": "0.1.2",
+        "stylelint-config-standard-scss": "^11.0.0",
+        "stylelint-order": "6.0.3",
+        "stylelint-scss": "5.2.1",
+        "webpack-stream": "^7.0.0"
+    }
+}

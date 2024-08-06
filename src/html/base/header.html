@@ -1,0 +1,117 @@
+<header class="header @@if (context.mod) { header--@@mod }">
+  <div class="header__wrapper">
+    <div class="header__wrapper-top">
+      <nav class="header__top-block">
+        <ul class="header__top-menu">
+          <li><a class="header__top-menu-link" href="#">Автоломбард</a></li>
+          <li><a class="header__top-menu-link" href="#">Кредитные продукты</a></li>
+          <li><a class="header__top-menu-link" href="#">О компании</a></li>
+          <li><a class="header__top-menu-link" href="#">Привелегии</a></li>
+          <li><a class="header__top-menu-link" href="#">Договоры</a></li>
+          <li><a class="header__top-menu-link" href="#">Вопросы и ответы</a></li>
+          <li><a class="header__top-menu-link" href="#">Новости</a></li>
+          <li><a class="header__top-menu-link" href="#">Статьи</a></li>
+          <li><a class="header__top-menu-link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__block">
+        <a
+          class="header__logo"
+          @@if
+          (!context.main)
+          {href="index.html"
+          }
+          aria-label="Переход на главную"
+        >
+          <svg
+            width="255"
+            height="51"
+            viewBox="0 0 255 51"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="#logo"></use>
+          </svg>
+        </a>
+
+        <div class="header__location header__location--top">
+          <span class="header__location-discription"
+            >Займы на лучших условиях в Санкт-Петербурге</span
+          >
+
+          <div class="header__location-address">
+            <svg
+              width="14"
+              height="19"
+              viewBox="0 0 14 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlink:href="#pin"></use>
+            </svg>
+
+            ул. Графтио, д. 3
+          </div>
+        </div>
+
+        <div class="header__phone-block header__phone-block--top">
+          <span class="header__phone-number">+7 (812) 416-42-16</span>
+
+          <button class="header__phone-callback" type="button">Заказать обратный звонок</button>
+        </div>
+
+        <button class="header__menu-request btn link-popup" type="button">Оставить заявку</button>
+
+        <button class="header__menu-btn" type="button" aria-label="меню">
+          <div class="header__menu-top-line"></div>
+          <div class="header__menu-bottom-line"></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="header__menu">
+      <ul class="header__menu-block">
+        <li><a class="header__menu-link" href="#">Автоломбард</a></li>
+        <li><a class="header__menu-link" href="#">Кредитные продукты</a></li>
+        <li><a class="header__menu-link" href="#">О компании</a></li>
+        <li><a class="header__menu-link" href="#">Привелегии</a></li>
+        <li><a class="header__menu-link" href="#">Договоры</a></li>
+        <li><a class="header__menu-link" href="#">Вопросы и ответы</a></li>
+        <li><a class="header__menu-link" href="#">Новости</a></li>
+        <li><a class="header__menu-link" href="#">Статьи</a></li>
+        <li><a class="header__menu-link" href="#">Контакты</a></li>
+      </ul>
+
+      <div class="header__location">
+        <span class="header__location-discription"
+          >Займы на лучших условиях в Санкт-Петербурге</span
+        >
+
+        <div class="header__location-address">
+          <svg
+            width="14"
+            height="19"
+            viewBox="0 0 14 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="#pin"></use>
+          </svg>
+
+          ул. Графтио, д. 3
+        </div>
+      </div>
+
+      <div class="header__block-down">
+        <div class="header__phone-block">
+          <span class="header__phone-number">+7 (812) 416-42-16</span>
+
+          <button class="header__phone-callback" type="button">Заказать обратный звонок</button>
+        </div>
+
+        <button class="header__menu-request btn link-popup" type="button">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+</header>

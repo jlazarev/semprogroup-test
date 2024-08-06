@@ -1,0 +1,277 @@
+.examples {
+  background-color: $color-grey-light;
+}
+
+.examples__wrapper {
+  @include viewport--768 {
+    padding: 90px 20px 100px;
+  }
+
+  @include viewport--1200 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 122px 20px 100px;
+  }
+
+  padding: 60px 20px 10px;
+  overflow: hidden;
+}
+
+.examples__title {
+  @include viewport--768 {
+    width: 520px;
+    margin-right: 250px;
+    margin-bottom: 46px;
+
+    font-size: 30px;
+  }
+
+  @include viewport--1200 {
+    width: 600px;
+    margin-bottom: 62px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 130%;
+  }
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 24px;
+
+  font-family: 'Georgia', sans-serif;
+  line-height: 130%;
+}
+
+.examples__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.examples__swiper {
+  position: relative;
+}
+
+.examples__navigation-block {
+  @include viewport--768 {
+    position: absolute;
+    top: -114px;
+    right: 0;
+  }
+
+  @include viewport--1200 {
+    top: -147px;
+  }
+
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.examples__navigation-btn {
+  @include viewport--768 {
+    width: 54px;
+    height: 54px;
+    margin-right: 0;
+    margin-left: 20px;
+  }
+
+  position: static;
+
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  margin-right: 20px;
+
+  color: $color-default-black;
+
+  background-color: $color-default-white;
+  border-radius: 10px;
+
+  &::after {
+    margin: 0;
+
+    font-size: 20px;
+  }
+}
+
+.examples__info-box {
+  @include viewport--768 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 338px;
+    padding: 40px;
+  }
+
+  @include viewport--1200 {
+    flex-grow: 0;
+    align-self: flex-start;
+    width: 440px;
+  }
+  margin-bottom: 20px;
+  padding: 20px;
+
+  background-color: $color-default-white;
+
+  border-radius: 20px;
+}
+
+.examples__item {
+  @include viewport--768 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.examples__item-title {
+  @include viewport--768 {
+    margin-bottom: 13px;
+
+    font-size: 26px;
+  }
+  margin: 0;
+  margin-bottom: 11px;
+
+  font-weight: 700;
+  font-size: 24px;
+
+  font-family: 'Georgia', sans-serif;
+}
+
+.examples__sub-text {
+  @include viewport--768 {
+    margin-bottom: 43px;
+  }
+
+  @include viewport--1200 {
+    margin-bottom: 69px;
+  }
+  display: block;
+  margin-bottom: 31px;
+
+  color: $color-grey;
+
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.examples__description {
+  ul {
+    padding: 0;
+
+    list-style: none;
+  }
+}
+
+.examples__description-item {
+  @include viewport--768 {
+    margin-bottom: 24px;
+  }
+
+  display: flex;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    flex-grow: 1;
+    margin: 0 10px;
+
+    border-bottom: 1px dashed $color-grey;
+
+    content: '';
+  }
+}
+
+.examples__dt {
+  @include viewport--768 {
+    font-size: 22px;
+  }
+
+  order: -1;
+
+  color: $color-grey;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.examples__dd {
+  @include viewport--768 {
+    font-size: 22px;
+  }
+
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.examples__img-box {
+  @include viewport--768 {
+    left: -35px;
+
+    min-width: 450px;
+    max-width: 700px;
+    height: 300px;
+    margin-right: -50px;
+
+    .examples__item & img {
+      height: 300px;
+    }
+  }
+
+  @include viewport--1200 {
+    top: -42px;
+    left: -5px;
+
+    width: 100%;
+    max-width: 1000px;
+    height: 390px;
+
+    .examples__item & img {
+      height: 390px;
+    }
+  }
+
+  position: relative;
+
+  img {
+    position: relative;
+    z-index: 1;
+
+    height: 200px;
+    object-fit: contain;
+  }
+
+  &::after {
+    @include viewport--768 {
+      top: 24px;
+      left: -29px;
+
+      width: 248px;
+      height: 248px;
+    }
+
+    @include viewport--1200 {
+      top: 25px;
+      left: 5px;
+
+      width: 356px;
+      height: 356px;
+    }
+
+    position: absolute;
+    top: 11px;
+    left: -29px;
+
+    width: 202px;
+    height: 202px;
+
+    background-color: $color-red;
+    border-radius: 50%;
+
+    content: '';
+  }
+}

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    @@include("src/html/base/head.html")
+    <title>Немецкий автоломбард</title>
+  </head>
+  <body class="page-body">
+    <div style="display: none">
+      @@if (path === 'public') { @@include("public/assets/img/sprite/sprite_auto.svg") } @@if (path
+      === 'build') { @@include("build/assets/img/sprite/sprite_auto.svg") }
+    </div>
+
+    <div class="wrapper">
+      @@include("src/html/base/header.html")
+
+      <main class="page-main">
+        <h1 class="visually-hidden">Немецкий автоломбард</h1>
+
+        <section class="loan">
+          <div class="loan__wrapper">
+            <h2 class="loan__title">Займ под ПТС по низкой ставке от 2,9% – авто остаётся у вас</h2>
+
+            <ul class="loan__features">
+              <li>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="#features"></use>
+                </svg>
+
+                Бесплатный выезд оценщика и деньги на карту или наличными в день обращения
+                с доставкой по Санкт-Петербургу и Ленинградской области
+              </li>
+              <li>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="#features"></use>
+                </svg>
+
+                Услугу оказывает ООО МКК «Немецкая финансовая компания»
+              </li>
+            </ul>
+            <button class="loan__btn btn" type="button">Рассчитать сумму займа</button>
+
+            <ul class="loan__steps">
+              <li class="loan__step">
+                Оставьте заявку на&nbsp;сайте или по&nbsp;номеру: +7&nbsp;(812)&nbsp;416-42-16
+
+                <svg
+                  width="14"
+                  height="26"
+                  viewBox="0 0 14 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="#white-arrow"></use>
+                </svg>
+              </li>
+              <li class="loan__step">
+                Приезжайте к&nbsp;нам в&nbsp;офис на&nbsp;своём автомобиле
+
+                <svg
+                  width="14"
+                  height="26"
+                  viewBox="0 0 14 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="#white-arrow"></use>
+                </svg>
+              </li>
+              <li class="loan__step">
+                Заключите с&nbsp;нашей компанией договор займа под ПТС
+
+                <svg
+                  width="14"
+                  height="26"
+                  viewBox="0 0 14 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="#white-arrow"></use>
+                </svg>
+              </li>
+              <li class="loan__step">
+                Получите займ наличными в&nbsp;день обращения
+
+                <svg
+                  width="14"
+                  height="26"
+                  viewBox="0 0 14 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="#white-arrow"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="appraiser">
+          <div class="appraiser__wrapper">
+            <h2 class="appraiser__title">
+              <span class="title-red">Бесплатный выезд</span> оценщика и доставка денег
+            </h2>
+
+            <p class="appraiser__paragraph">
+              Некогда ехать в ломбард? Пригласите нашего специалиста для оценки вашего автомобиля.
+            </p>
+
+            <p class="appraiser__paragraph">
+              Услуга полностью бесплатна. Оценщик автоломбарда приедет в удобное вам место и время
+              в Санкт-Петербурге в пределах КАД и на месте определит возможную сумму займа
+              и процентную ставку.
+            </p>
+
+            <button class="appraiser__btn btn" type="button">Вызвать оценщика</button>
+          </div>
+        </section>
+
+        <section class="calculator">
+          <div class="calculator__wrapper">
+            <h2 class="calculator__title">
+              <span class="title-red">Калькулятор</span> «Немецкого автоломбарда»
+            </h2>
+
+            <form class="calculator__form" action="#" method="post">
+              <div class="calculator__container">
+                <div class="range-slider">
+                  <h3 class="range-slider__title">Рыночная стоимость автомобиля</h3>
+                  <div class="range-slider__inputs">
+                    <label class="range-slider__label">
+                      <input
+                        type="numder"
+                        class="range-slider__input"
+                        id="input-price"
+                        min="350000"
+                        max="3000000"
+                      />
+                    </label>
+                  </div>
+                  <div class="range-slider__slider" id="range-slider-price"></div>
+                  <div class="range-slider__legend">
+                    <span>350 000 ₽</span>
+                    <span>3 000 000 ₽</span>
+                  </div>
+                </div>
+
+                <div class="range-slider">
+                  <h3 class="range-slider__title">Срок займа</h3>
+                  <div class="range-slider__inputs">
+                    <label class="range-slider__label">
+                      <input
+                        type="numder"
+                        class="range-slider__input"
+                        id="input-month"
+                        min="1"
+                        max="36"
+                      />
+                    </label>
+                  </div>
+                  <div class="range-slider__slider" id="range-slider-month"></div>
+                  <div class="range-slider__legend">
+                    <span>1 месяц</span>
+                    <span>36 месяцев</span>
+                  </div>
+                </div>
+
+                <div class="range-slider range-slider--mb">
+                  <h3 class="range-slider__title">Ежемесячный платёж</h3>
+                  <div class="range-slider__inputs">
+                    <label class="range-slider__label">
+                      <input
+                        type="numder"
+                        class="range-slider__input"
+                        id="input-payment"
+                        min="50000"
+                        max="200000"
+                      />
+                    </label>
+                  </div>
+                  <div class="range-slider__slider" id="range-slider-payment"></div>
+                </div>
+              </div>
+
+              <div class="calculator__container">
+                <div class="calculator__input-container">
+                  <div class="calculator__input-block">
+                    <h3 class="calculator__input-title">Оценочная сумма процентов</h3>
+                    <label class="calculator__input-label">
+                      <input
+                        type="numder"
+                        class="calculator__input"
+                        min="0"
+                        max="100"
+                        value="10 650 ₽"
+                        readonly
+                      />
+                    </label>
+                  </div>
+
+                  <div class="calculator__input-block">
+                    <h3 class="calculator__input-title">Оценочная сумма займа</h3>
+                    <label class="calculator__input-label">
+                      <input
+                        type="numder"
+                        class="calculator__input"
+                        min="0"
+                        max="100"
+                        value="360 650 ₽"
+                        readonly
+                      />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="calculator__block">
+                  <span class="calculator__rate">
+                    Оценочная ставка: <span class="title-red">3,3%</span> в месяц
+                  </span>
+
+                  <button class="calculator__btn btn" type="button">Получить одобрение</button>
+                </div>
+              </div>
+
+              <ul class="calculator__functions">
+                <li>
+                  <a href="#">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use xlink:href="#calendar"></use>
+                    </svg>
+
+                    <span>Открыть график платежей</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use xlink:href="#note"></use>
+                    </svg>
+
+                    <span>Полные условия займа</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use xlink:href="#receive-square"></use>
+                    </svg>
+
+                    <span>Сохранить результаты</span>
+                  </a>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </section>
+
+        <section class="examples">
+          <div class="examples__wrapper">
+            <h2 class="examples__title">
+              Примеры выданных займов <span class="title-red">под залог ПТС</span>
+            </h2>
+
+            <div class="examples__swiper swiper">
+              <div class="examples__navigation-block">
+                <div class="examples__navigation-btn swiper-button-prev"></div>
+                <div class="examples__navigation-btn swiper-button-next"></div>
+              </div>
+
+              <ul class="examples__list swiper-wrapper">
+                <li class="examples__item swiper-slide">
+                  <div class="examples__info-box">
+                    <h3 class="examples__item-title">Audi A6</h3>
+                    <span class="examples__sub-text">2009 г. в., 185 000 км</span>
+
+                    <div class="examples__description">
+                      <ul>
+                        <li class="examples__description-item">
+                          <span class="examples__dt">Оценка:</span>
+                          <span class="examples__dd">570 000 ₽</span>
+                        </li>
+                        <li class="examples__description-item">
+                          <span class="examples__dt">Выдано:</span>
+                          <span class="examples__dd title-red">260 000 ₽</span>
+                        </li>
+                        <li class="examples__description-item">
+                          <span class="examples__dt">Ставка:</span>
+                          <span class="examples__dd title-red">6,9 % в мес.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="examples__img-box">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./assets/img/content/slider/audi-a6.webp    1x,
+                          ./assets/img/content/slider/audi-a6@2x.webp 2x
+                        "
+                      />
+
+                      <img
+                        src="./assets/img/content/slider/audi-a6.png"
+                        srcset="./assets/img/content/slider/audi-a6@2x.png 2x"
+                        alt="audi-a6"
+                      />
+                    </picture>
+                  </div>
+                </li>
+                <li class="examples__item swiper-slide">
+                  <div class="examples__info-box">
+                    <h3 class="examples__item-title">Toyota Camry</h3>
+                    <span class="examples__sub-text">2013 г. в., 108 000 км</span>
+
+                    <div class="examples__description">
+                      <ul>
+                        <li class="examples__description-item">
+                          <span class="examples__dt">Оценка:</span>
+                          <span class="examples__dd">850 000 ₽</span>
+                        </li>
+                        <li class="examples__description-item">
+                          <span class="examples__dt">Выдано:</span>
+                          <span class="examples__dd title-red">470 000 ₽</span>
+                        </li>
+                        <li class="examples__description-item">
+                          <span class="examples__dt">Ставка:</span>
+                          <span class="examples__dd title-red">7 % в мес.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="examples__img-box">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="
+                          ./assets/img/content/slider/toyota.webp    1x,
+                          ./assets/img/content/slider/toyota@2x.webp 2x
+                        "
+                      />
+
+                      <img
+                        src="./assets/img/content/slider/toyota.png"
+                        srcset="./assets/img/content/slider/toyota@2x.png 2x"
+                        alt="toyota"
+                      />
+                    </picture>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="popup">
+        <div class="popup__wrapper popup__wrapper--form">
+          <h2 class="popup__title title">Заявка на&nbsp;звонок</h2>
+
+          <div class="popup__server-error">
+            Не&nbsp;удалось отправить заявку. Повторите попытку чуть позже.
+          </div>
+
+          <form class="popup__form" method="post" novalidate id="popup-form">
+            <div class="input-box">
+              <input id="input-name" type="text" name="name" />
+              <label class="placeholder" for="input-name">Ваше имя</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
+
+            <div class="input-box">
+              <input
+                class="_phone"
+                id="input-tel"
+                type="tel"
+                name="tel"
+                placeholder="+7 921 123-45-67"
+              />
+              <label class="placeholder" for="input-tel">Телефон</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
+
+            <div class="input-box">
+              <input class="_email" id="input-email" type="email" name="email" />
+              <label class="placeholder" for="input-email">E-mail</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
+
+            <div class="input-box">
+              <input id="input-company" type="text" name="company" />
+              <label class="placeholder" for="input-company">Компания</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
+
+            <div class="input-box">
+              <textarea id="input-prodject" name="prodject"></textarea>
+              <label class="placeholder" for="input-prodject">Расскажите о вашем проекте</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
+
+            <button class="btn btn-submit g-recaptcha" type="submit">
+              <svg width="24" height="24">
+                <use xlink:href="#ic_process"></use>
+              </svg>
+              <span class="common">Оставить заявку</span>
+              <span class="sanding">Подождите...</span>
+            </button>
+          </form>
+
+          <div class="popup__description">
+            Нажимая кнопку &laquo;Оставить заявку&raquo; вы&nbsp;принимаете
+            <a class="perso-link" href="#">условия хранения и&nbsp;обработки персональных данных</a>
+          </div>
+
+          <button class="popup__close-btn" type="button" aria-label="закрыть">
+            <svg width="24" height="24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="popup__wrapper popup__wrapper--success">
+          <div class="popup__svg-box">
+            <svg
+              width="164"
+              height="96"
+              viewBox="0 0 164 96"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlink:href="#ic_send-message"></use>
+            </svg>
+          </div>
+
+          <h2 class="popup__title title">Сообщение отправлено</h2>
+
+          <p class="popup__paragraph">
+            Спасибо за&nbsp;обращение.<br />
+            Наши специалисты ответят вам в&nbsp;ближайшее время
+          </p>
+
+          <button class="popup__close-btn" type="button" aria-label="закрыть">
+            <svg width="24" height="24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="popup__wrapper popup__wrapper--perso">
+          <h2 class="popup__title title">Согласие на&nbsp;обработку персональных данных</h2>
+
+          <p class="popup__paragraph">
+            Я&nbsp;даю свое согласие ООО &laquo;Расчетные системы&raquo; (далее&nbsp;&mdash; Сервис)
+            на&nbsp;обработку моих персональных данных, предоставленных мной Сервису в&nbsp;заявке
+            на&nbsp;сайте Сервиса, с&nbsp;использованием средств автоматизации и&nbsp;без
+            использования таковых, включая сбор, запись, систематизацию, накопление, хранение,
+            уточнение (обновление, изменение), извлечение, использование, передачу (предоставление,
+            доступ), блокирование, удаление, уничтожение персональных данных и&nbsp;иные действия,
+            предусмотренные Федеральным законом от&nbsp;27.07.2006 &#8470;&nbsp;152-ФЗ
+            &laquo;О&nbsp;персональных данных&raquo; в&nbsp;целях осуществления связи со&nbsp;мной
+            для предоставления информации об&nbsp;услугах Сервиса.
+          </p>
+
+          <p class="popup__paragraph">
+            Предоставленные Сервису через заявку персональные данные подлежат уничтожению
+            по&nbsp;достижению указанных целей обработки или в&nbsp;случае утраты необходимости
+            в&nbsp;достижении этих целей.
+          </p>
+
+          <p class="popup__paragraph">
+            Я&nbsp;понимаю и&nbsp;соглашаюсь с&nbsp;тем, что для прекращения использования моих
+            персональных данных, мне необходимо обратиться к&nbsp;Сервису для оформления отзыва
+            согласия на&nbsp;обработку моих персональных данных.
+          </p>
+
+          <button class="popup__back-btn back-btn" type="button" aria-label="назад">
+            <svg width="24" height="24">
+              <use xlink:href="#icon_back"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gooogle reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeuUcsoAAAAALIjo1cUSFVp8Q39WjFbHzhobIoN"></script>
+
+    <script src="./assets/js/vendor.js" type="module"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/95364254"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

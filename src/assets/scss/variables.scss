@@ -1,0 +1,46 @@
+// Colors
+// ---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+
+// Base
+
+$color-red: #de0a14;
+$color-red-hover: #d90429;
+$color-error: #f0eaeb;
+$color-grey: #828282;
+$color-grey-light: #f4f3f3;
+$color-muted: #5c6378;
+$color-yellow: #ffd000;
+$color-border: #dfdfdf;
+
+// Typography
+// ---------------------------------
+
+$font-family--montserrat: 'Montserrat', 'Verdana', sans-serif;
+$font-family--prosto-one: 'ProstoOne', 'Verdana', sans-serif;
+$font-family--Exo2: 'Exo2', 'Verdana', sans-serif;
+
+// Animation
+// ---------------------------------
+
+$default-transition-settings: 0.3s ease;
+$modal-transition-settings: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Viewports
+// ---------------------------------
+
+$viewport--576: 576px;
+$viewport--768: 768px;
+$viewport--1200: 1200px;
+$viewport--1920: 1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

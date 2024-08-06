@@ -1,0 +1,32 @@
+image: node:16.14.0
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deploy
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq sshpass
+  - npm install -g gulp-cli
+  - npm install
+  - npm -v
+  - gulp --version
+
+deploy:
+  stage: deploy
+  variables:
+    SSH_CMD: ssh -T $SSH_USER@$HOST -p 12012
+  when: manual
+  script:
+    - gulp build
+    - sshpass -V
+    - export SSHPASS=$USER_PASS
+    - echo $CI_COMMIT_REF_NAME > build/version.html
+    - sshpass -e ssh -o stricthostkeychecking=no $USER@$HOST -p12012 "sudo mkdir -p '/var/www/kazna.tprs.ru/$CI_COMMIT_REF_NAME'"
+    - sshpass -e ssh -o stricthostkeychecking=no $USER@$HOST -p12012 "sudo chmod -R 777 '/var/www/kazna.tprs.ru/$CI_COMMIT_REF_NAME'"
+    - sshpass -e scp -P 12012 -o stricthostkeychecking=no -pr ./* "$USER@$HOST:'/var/www/kazna.tprs.ru/$CI_COMMIT_REF_NAME'"
+    - sshpass -e ssh -o stricthostkeychecking=no $USER@$HOST -p12012 "sudo echo 'root /var/www/kazna.tprs.ru/$CI_COMMIT_REF_NAME/build/;' > /var/www/kazna.tprs.ru/nginx_proxy.conf"
+    - sshpass -e ssh -o stricthostkeychecking=no $USER@$HOST -p12012 "sudo service nginx reload"
+  only: [tags]

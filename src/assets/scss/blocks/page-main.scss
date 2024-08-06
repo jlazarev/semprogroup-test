@@ -1,0 +1,12 @@
+.page-main {
+  @include viewport--768 {
+    margin-top: 84px;
+  }
+
+  @include viewport--1200 {
+    margin-top: 159px;
+  }
+
+  margin-top: 80px;
+  overflow-x: hidden;
+}

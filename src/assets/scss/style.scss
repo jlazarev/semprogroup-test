@@ -1,0 +1,28 @@
+// Vendor
+// ---------------------------------
+
+@import 'vendor/normalize';
+@import 'vendor/swiper';
+@import 'vendor/nouislider.min';
+
+// Global
+// ---------------------------------
+
+@import 'variables';
+@import 'mixins';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/container';
+
+// Blocks
+// ---------------------------------
+
+@import 'blocks/header';
+@import 'blocks/page-main';
+@import 'blocks/popup';
+@import 'blocks/loan';
+@import 'blocks/appraiser';
+@import 'blocks/calculator';
+@import 'blocks/range-slider';
+@import 'blocks/examples';
