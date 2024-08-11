@@ -1,0 +1,35 @@
+.promo {
+  height: calc(100vh - 100px);
+}
+
+.promo__img-box {
+  margin-bottom: 40px;
+  height: calc(100% - 243px);
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.promo__info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.promo__description {
+  color: $color-blue;
+  text-transform: uppercase;
+  font-size: 26px;
+  max-width: 400px;
+  line-height: 139%;
+  margin-bottom: 5px;
+}
+
+.promo__title {
+  svg {
+    transform: translateX(0.2%);
+  }
+}

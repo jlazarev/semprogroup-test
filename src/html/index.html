@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     @@include("src/html/base/head.html")
-    <title>Немецкий автоломбард</title>
+    <title>semprogroup-test</title>
   </head>
   <body class="page-body">
     <div style="display: none">
@@ -14,372 +14,129 @@
       @@include("src/html/base/header.html")
 
       <main class="page-main">
-        <h1 class="visually-hidden">Немецкий автоломбард</h1>
+        <h1 class="visually-hidden">semprogroup-test</h1>
 
-        <section class="loan">
-          <div class="loan__wrapper">
-            <h2 class="loan__title">Займ под ПТС по низкой ставке от 2,9% – авто остаётся у вас</h2>
+        <section class="promo">
+          <h2 class="visually-hidden">promo</h2>
 
-            <ul class="loan__features">
-              <li>
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use xlink:href="#features"></use>
-                </svg>
+          <div class="promo__img-box">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/img/content/promo/promo-img.webp    1x,
+                  ./assets/img/content/promo/promo-img@2x.webp 2x
+                "
+              />
 
-                Бесплатный выезд оценщика и деньги на карту или наличными в день обращения
-                с доставкой по Санкт-Петербургу и Ленинградской области
-              </li>
-              <li>
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use xlink:href="#features"></use>
-                </svg>
+              <img
+                src="./assets/img/content/promo/promo-img.jpg"
+                srcset="./assets/img/content/promo/promo-img@2x.png 2x"
+                alt="promo-img"
+              />
+            </picture>
+          </div>
 
-                Услугу оказывает ООО МКК «Немецкая финансовая компания»
-              </li>
-            </ul>
-            <button class="loan__btn btn" type="button">Рассчитать сумму займа</button>
+          <div class="promo__info-box">
+            <span class="promo__description">
+              Дом бизнес-класса<br> для ценителей роскоши
+            </span>
 
-            <ul class="loan__steps">
-              <li class="loan__step">
-                Оставьте заявку на&nbsp;сайте или по&nbsp;номеру: +7&nbsp;(812)&nbsp;416-42-16
-
-                <svg
-                  width="14"
-                  height="26"
-                  viewBox="0 0 14 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use xlink:href="#white-arrow"></use>
-                </svg>
-              </li>
-              <li class="loan__step">
-                Приезжайте к&nbsp;нам в&nbsp;офис на&nbsp;своём автомобиле
-
-                <svg
-                  width="14"
-                  height="26"
-                  viewBox="0 0 14 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use xlink:href="#white-arrow"></use>
-                </svg>
-              </li>
-              <li class="loan__step">
-                Заключите с&nbsp;нашей компанией договор займа под ПТС
-
-                <svg
-                  width="14"
-                  height="26"
-                  viewBox="0 0 14 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use xlink:href="#white-arrow"></use>
-                </svg>
-              </li>
-              <li class="loan__step">
-                Получите займ наличными в&nbsp;день обращения
-
-                <svg
-                  width="14"
-                  height="26"
-                  viewBox="0 0 14 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use xlink:href="#white-arrow"></use>
-                </svg>
-              </li>
-            </ul>
+            <div class="promo__title">
+              <svg
+                width="719"
+                height="114"
+                viewBox="0 0 719 114"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="#logo-2"></use>
+              </svg>
+            </div>
           </div>
         </section>
 
-        <section class="appraiser">
-          <div class="appraiser__wrapper">
-            <h2 class="appraiser__title">
-              <span class="title-red">Бесплатный выезд</span> оценщика и доставка денег
-            </h2>
+        <section class="about">
+          <div class="about__wrapper">
+            <div class="about__block">
+              <div class="about__img-box about__box">
+                <h2 class="about__title">О проекте</h2>
 
-            <p class="appraiser__paragraph">
-              Некогда ехать в ломбард? Пригласите нашего специалиста для оценки вашего автомобиля.
-            </p>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./assets/img/content/about/about-img.webp    1x,
+                      ./assets/img/content/about/about-img@2x.webp 2x
+                    "
+                  />
 
-            <p class="appraiser__paragraph">
-              Услуга полностью бесплатна. Оценщик автоломбарда приедет в удобное вам место и время
-              в Санкт-Петербурге в пределах КАД и на месте определит возможную сумму займа
-              и процентную ставку.
-            </p>
+                  <img
+                    src="./assets/img/content/about/about-img.jpg"
+                    srcset="./assets/img/content/about/about-img@2x.png 2x"
+                    alt="about-img"
+                  />
+                </picture>
 
-            <button class="appraiser__btn btn" type="button">Вызвать оценщика</button>
-          </div>
-        </section>
-
-        <section class="calculator">
-          <div class="calculator__wrapper">
-            <h2 class="calculator__title">
-              <span class="title-red">Калькулятор</span> «Немецкого автоломбарда»
-            </h2>
-
-            <form class="calculator__form" action="#" method="post">
-              <div class="calculator__container">
-                <div class="range-slider">
-                  <h3 class="range-slider__title">Рыночная стоимость автомобиля</h3>
-                  <div class="range-slider__inputs">
-                    <label class="range-slider__label">
-                      <input
-                        type="numder"
-                        class="range-slider__input"
-                        id="input-price"
-                        min="350000"
-                        max="3000000"
-                      />
-                    </label>
-                  </div>
-                  <div class="range-slider__slider" id="range-slider-price"></div>
-                  <div class="range-slider__legend">
-                    <span>350 000 ₽</span>
-                    <span>3 000 000 ₽</span>
-                  </div>
-                </div>
-
-                <div class="range-slider">
-                  <h3 class="range-slider__title">Срок займа</h3>
-                  <div class="range-slider__inputs">
-                    <label class="range-slider__label">
-                      <input
-                        type="numder"
-                        class="range-slider__input"
-                        id="input-month"
-                        min="1"
-                        max="36"
-                      />
-                    </label>
-                  </div>
-                  <div class="range-slider__slider" id="range-slider-month"></div>
-                  <div class="range-slider__legend">
-                    <span>1 месяц</span>
-                    <span>36 месяцев</span>
-                  </div>
-                </div>
-
-                <div class="range-slider range-slider--mb">
-                  <h3 class="range-slider__title">Ежемесячный платёж</h3>
-                  <div class="range-slider__inputs">
-                    <label class="range-slider__label">
-                      <input
-                        type="numder"
-                        class="range-slider__input"
-                        id="input-payment"
-                        min="50000"
-                        max="200000"
-                      />
-                    </label>
-                  </div>
-                  <div class="range-slider__slider" id="range-slider-payment"></div>
+                <div class="about__logo">
+                  <svg
+                    width="49"
+                    height="68"
+                    viewBox="0 0 49 68"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="#logo-3"></use>
+                  </svg>
                 </div>
               </div>
 
-              <div class="calculator__container">
-                <div class="calculator__input-container">
-                  <div class="calculator__input-block">
-                    <h3 class="calculator__input-title">Оценочная сумма процентов</h3>
-                    <label class="calculator__input-label">
-                      <input
-                        type="numder"
-                        class="calculator__input"
-                        min="0"
-                        max="100"
-                        value="10 650 ₽"
-                        readonly
-                      />
-                    </label>
-                  </div>
-
-                  <div class="calculator__input-block">
-                    <h3 class="calculator__input-title">Оценочная сумма займа</h3>
-                    <label class="calculator__input-label">
-                      <input
-                        type="numder"
-                        class="calculator__input"
-                        min="0"
-                        max="100"
-                        value="360 650 ₽"
-                        readonly
-                      />
-                    </label>
-                  </div>
+              <div class="about__info-box about__box">
+                <div class="about__info-title">
+                  уютное и&nbsp;безопасное пространство для счастливой, <span class="accent-text">спокойной и&nbsp;размеренной жизни</span>
                 </div>
 
-                <div class="calculator__block">
-                  <span class="calculator__rate">
-                    Оценочная ставка: <span class="title-red">3,3%</span> в месяц
-                  </span>
-
-                  <button class="calculator__btn btn" type="button">Получить одобрение</button>
+                <div class="about__description">
+                  <span class="accent-text">Квартиры от&nbsp;65&nbsp;до&nbsp;356 м<sup>2</sup>&nbsp;с чистовой отделкой,</span> балконами, лоджиями и&nbsp;террасами&nbsp;В собственной ЗАКРЫТОЙ охраняемой территории.
                 </div>
-              </div>
 
-              <ul class="calculator__functions">
-                <li>
-                  <a href="#">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <use xlink:href="#calendar"></use>
-                    </svg>
-
-                    <span>Открыть график платежей</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <use xlink:href="#note"></use>
-                    </svg>
-
-                    <span>Полные условия займа</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <use xlink:href="#receive-square"></use>
-                    </svg>
-
-                    <span>Сохранить результаты</span>
-                  </a>
-                </li>
-              </ul>
-            </form>
-          </div>
-        </section>
-
-        <section class="examples">
-          <div class="examples__wrapper">
-            <h2 class="examples__title">
-              Примеры выданных займов <span class="title-red">под залог ПТС</span>
-            </h2>
-
-            <div class="examples__swiper swiper">
-              <div class="examples__navigation-block">
-                <div class="examples__navigation-btn swiper-button-prev"></div>
-                <div class="examples__navigation-btn swiper-button-next"></div>
-              </div>
-
-              <ul class="examples__list swiper-wrapper">
-                <li class="examples__item swiper-slide">
-                  <div class="examples__info-box">
-                    <h3 class="examples__item-title">Audi A6</h3>
-                    <span class="examples__sub-text">2009 г. в., 185 000 км</span>
-
-                    <div class="examples__description">
-                      <ul>
-                        <li class="examples__description-item">
-                          <span class="examples__dt">Оценка:</span>
-                          <span class="examples__dd">570 000 ₽</span>
-                        </li>
-                        <li class="examples__description-item">
-                          <span class="examples__dt">Выдано:</span>
-                          <span class="examples__dd title-red">260 000 ₽</span>
-                        </li>
-                        <li class="examples__description-item">
-                          <span class="examples__dt">Ставка:</span>
-                          <span class="examples__dd title-red">6,9 % в мес.</span>
-                        </li>
-                      </ul>
-                    </div>
+                <div class="about__video-box">
+                  <div class="about__video-title">
+                    Видео о&nbsp;проекте
+                    <span class="about__sup-text">1:25 минут</span>
                   </div>
 
-                  <div class="examples__img-box">
+                  <button class="about__video-btn">
                     <picture>
                       <source
                         type="image/webp"
                         srcset="
-                          ./assets/img/content/slider/audi-a6.webp    1x,
-                          ./assets/img/content/slider/audi-a6@2x.webp 2x
+                          ./assets/img/content/about/video-img.webp    1x,
+                          ./assets/img/content/about/video-img@2x.webp 2x
                         "
                       />
 
                       <img
-                        src="./assets/img/content/slider/audi-a6.png"
-                        srcset="./assets/img/content/slider/audi-a6@2x.png 2x"
-                        alt="audi-a6"
+                        src="./assets/img/content/about/video-img.jpg"
+                        srcset="./assets/img/content/about/video-img@2x.png 2x"
+                        alt="video-img"
                       />
                     </picture>
-                  </div>
-                </li>
-                <li class="examples__item swiper-slide">
-                  <div class="examples__info-box">
-                    <h3 class="examples__item-title">Toyota Camry</h3>
-                    <span class="examples__sub-text">2013 г. в., 108 000 км</span>
-
-                    <div class="examples__description">
-                      <ul>
-                        <li class="examples__description-item">
-                          <span class="examples__dt">Оценка:</span>
-                          <span class="examples__dd">850 000 ₽</span>
-                        </li>
-                        <li class="examples__description-item">
-                          <span class="examples__dt">Выдано:</span>
-                          <span class="examples__dd title-red">470 000 ₽</span>
-                        </li>
-                        <li class="examples__description-item">
-                          <span class="examples__dt">Ставка:</span>
-                          <span class="examples__dd title-red">7 % в мес.</span>
-                        </li>
-                      </ul>
+                    <div class="about__btn-inner">
+                      <svg
+                        width="10"
+                        height="11"
+                        viewBox="0 0 10 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <use xlink:href="#play"></use>
+                      </svg>
+                      play
                     </div>
-                  </div>
-
-                  <div class="examples__img-box">
-                    <picture>
-                      <source
-                        type="image/webp"
-                        srcset="
-                          ./assets/img/content/slider/toyota.webp    1x,
-                          ./assets/img/content/slider/toyota@2x.webp 2x
-                        "
-                      />
-
-                      <img
-                        src="./assets/img/content/slider/toyota.png"
-                        srcset="./assets/img/content/slider/toyota@2x.png 2x"
-                        alt="toyota"
-                      />
-                    </picture>
-                  </div>
-                </li>
-              </ul>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
