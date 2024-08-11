@@ -1,4 +1,4 @@
-# Ignore artifacts:123
+# Ignore artifacts:
 build/
 public/
 *.min.*

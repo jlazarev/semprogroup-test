@@ -10,4 +10,3 @@ const webpacConfig = {
 };
 
 export default webpacConfig;
-// 123
