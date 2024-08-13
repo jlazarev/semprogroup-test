@@ -30,6 +30,12 @@
   }
 }
 
+@mixin viewport--1770 {
+  @media (min-width: $viewport--1770) {
+    @content;
+  }
+}
+
 @mixin viewport--1920 {
   @media (min-width: $viewport--1920) {
     @content;

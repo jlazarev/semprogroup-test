@@ -1,4 +1,8 @@
 .header {
+  @include viewport--1770 {
+    height: 130px;
+  }
+
   position: fixed;
   top: 0;
   right: 0;
@@ -22,20 +26,17 @@
   justify-content: space-between;
   height: 100%;
   margin: 0 auto;
-
-  line-height: 32px;
 }
 
 .header__wrapper-top {
-  @include viewport--1200 {
-    flex-direction: column;
+  @include viewport--1770 {
+    padding: 0 80px;
   }
 
   position: relative;
   z-index: 10;
 
   display: flex;
-  flex-direction: row-reverse;
   flex-grow: 1;
   align-items: center;
   height: 100%;
@@ -80,7 +81,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1400px;
 }
 
 .header__block-side {
@@ -97,6 +97,11 @@
   margin: 0 auto;
 
   svg {
+    @include viewport--1770 {
+      width: 187px;
+      height: 30px;
+    }
+
     width: 156px;
     height: 25px;
   }
@@ -106,8 +111,8 @@
   margin-bottom: 40px;
 
   &--top {
-    @include viewport--1200 {
-
+    @include viewport--1770 {
+      margin-left: 43px;
     }
 
     display: block;
@@ -117,6 +122,13 @@
 }
 
 .header__menu-apart {
+  @include viewport--1770 {
+    height: 51px;
+    border-radius: 25.5px;
+    padding: 0 25px;
+    font-size: 15px;
+  }
+
   height: 43px;
   border-radius: 21.5px;
   background-color: $color-blue;
@@ -129,6 +141,10 @@
   align-items: center;
 
   span {
+    @include viewport--1770 {
+      margin-right: 13px;
+    }
+
     margin-right: 8px;
   }
 }
@@ -163,18 +179,22 @@
   margin-bottom: 30px;
 
   &--top {
-    @include viewport--1200 {
-      display: flex;
-      margin-right: 40px;
+    @include viewport--1770 {
+      margin-right: 45px;
     }
 
-    display: none;
     margin-bottom: 0;
     margin-left: auto;
+    margin-right: 40px;
   }
 }
 
 .header__phone-number {
+  @include viewport--1770 {
+    font-size: 17px;
+
+  }
+
   font-weight: 600;
   font-size: 14px;
 }
@@ -212,6 +232,10 @@
   }
 
   span {
+    @include viewport--1770 {
+      font-size: 15px;
+    }
+
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 600;
@@ -253,6 +277,10 @@
 
 .header__burger-menu {
   &::before {
+    @include viewport--1770 {
+      width: 38px;
+    }
+
     position: absolute;
     top: 0;
     right: 0;
@@ -270,6 +298,11 @@
     content: '';
   }
 
+  @include viewport--1770 {
+    width: 38px;
+    margin-right: 15px;
+  }
+
   position: relative;
 
   width: 32px;
@@ -279,6 +312,10 @@
 
 .header__menu-top-line,
 .header__menu-bottom-line {
+  @include viewport--1770 {
+    width: 38px;
+  }
+
   position: absolute;
   inset: 0;
 
@@ -421,6 +458,10 @@
 
     @include viewport--1200 {
       align-self: center;
+    }
+
+    @include viewport--1770 {
+      font-size: 15px;
     }
 
     display: none;
