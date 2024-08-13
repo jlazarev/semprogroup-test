@@ -24,6 +24,12 @@
   }
 }
 
+@mixin viewport--1024-1280 {
+  @media (min-width: $viewport--1024) and (max-width: $viewport--1280) {
+    @content;
+  }
+}
+
 @mixin viewport--1281-1769 {
   @media (min-width: $viewport--1281) and (max-width: $viewport--1769) {
     @content;

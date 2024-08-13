@@ -17,13 +17,17 @@ img {
     padding: 0 80px;
   }
 
+  @include viewport--1024-1280 {
+    padding: 0 30px;
+  }
+
   position: relative;
 
   display: flex;
   flex-direction: column;
   min-height: calc(100 * var(--vh, 1vh));
-  overflow-x: hidden;
   padding: 0 40px;
+  overflow-x: hidden;
 
   .header,
   .footer {

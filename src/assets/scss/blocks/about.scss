@@ -4,17 +4,26 @@
 
 .about__title {
   @include viewport--1770 {
-    font-size: 17px;
     margin: 107px 0 36px;
+
+    font-size: 17px;
   }
 
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 400;
+  @include viewport--1024-1280 {
+    margin: 41px 0 17px;
+
+    font-size: 11px;
+  }
+
   display: flex;
   justify-content: flex-end;
-  color: $color-blue;
   margin: 19px 0 25px;
+
+  color: $color-blue;
+  font-weight: 400;
+  font-size: 13px;
+
+  text-transform: uppercase;
 }
 
 .about__block {
@@ -23,6 +32,9 @@
 }
 
 .about__box {
+  @include viewport--1024-1280 {
+    width: 42.3%;
+  }
   width: 41.7%;
 }
 
@@ -36,9 +48,13 @@
     overflow: hidden;
   }
 
+  @include viewport--1024-1280 {
+    height: 513px;
+  }
+
   img {
-    object-fit: cover;
     height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -46,6 +62,7 @@
   @include viewport--1770 {
     top: 279px;
     right: -129px;
+
     width: 259px;
     height: 259px;
 
@@ -55,21 +72,41 @@
     }
   }
 
-  background-color: $color-blue;
+  @include viewport--1024-1280 {
+    top: 140px;
+    right: -74px;
+
+    width: 148px;
+    height: 148px;
+
+    svg {
+      width: 35px;
+      height: 49px;
+    }
+  }
+
+  position: absolute;
   top: 154px;
   right: -100px;
-  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 200px;
+
+  background-color: $color-blue;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .about__info-box {
   @include viewport--1770 {
     padding-top: 239px;
+  }
+
+  @include viewport--1024-1280 {
+    padding-top: 120px;
+    padding-right: 74px;
   }
 
   padding-top: 123px;
@@ -82,36 +119,60 @@
       margin-bottom: 66px;
     }
 
-    content: "";
+    @include viewport--1024-1280 {
+      width: 35px;
+      height: 6px;
+      margin-bottom: 36px;
+    }
+    display: block;
     width: 49px;
     height: 9px;
-    display: block;
-    background-color: $color-blue;
     margin-bottom: 50px;
+
+    background-color: $color-blue;
+
+    content: '';
   }
 }
 
 .about__info-title {
   @include viewport--1770 {
-    font-size: 34px;
     margin-bottom: 120px;
+
+    font-size: 34px;
   }
 
-  font-size: 26px;
-  text-transform: uppercase;
-  line-height: 139%;
+  @include viewport--1024-1280 {
+    margin-bottom: 66px;
+
+    font-size: 19px;
+    line-height: 142%;
+  }
   margin-bottom: 100px;
+
+  font-size: 26px;
+  line-height: 139%;
+  text-transform: uppercase;
 }
 
 .about__description {
   @include viewport--1770 {
-    font-size: 20px;
     margin-bottom: 101px;
+
+    font-size: 20px;
   }
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 160%;
+
+  @include viewport--1024-1280 {
+    margin-bottom: 59px;
+
+    font-size: 12px;
+    line-height: 180%;
+  }
   margin-bottom: 97px;
+
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
 }
 
 .about__video-box {
@@ -119,12 +180,14 @@
   align-items: center;
 
   &::before {
-    content: "";
     display: block;
-    height: 1px;
     flex-grow: 1;
-    background-color: $color-grey;
+    height: 1px;
     margin: 0 15px;
+
+    background-color: $color-grey;
+
+    content: '';
   }
 }
 
@@ -132,20 +195,33 @@
   @include viewport--1770 {
     font-size: 18px;
   }
+
+  @include viewport--1024-1280 {
+    font-size: 10px;
+  }
   position: relative;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 600;
+
   order: -1;
+
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .about__sup-text {
   @include viewport--1770 {
     top: 28px;
   }
-  display: block;
+
+  @include viewport--1024-1280 {
+    font-size: 13px;
+  }
   position: absolute;
+
+  display: block;
+
   text-transform: none;
+
   opacity: 0.5;
 }
 
@@ -154,44 +230,72 @@
     width: 241px;
     margin-right: 37px;
   }
-  border: none;
-  background-color: transparent;
-  border-radius: 50%;
-  padding: 0;
+
+  @include viewport--1024-1280 {
+    width: 133px;
+    margin-right: 0;
+  }
   position: relative;
+
   margin-right: 3px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
 }
 
 .about__btn-inner {
   @include viewport--1770 {
     width: 142px;
     height: 142px;
+
     font-size: 18px;
   }
+
+  @include viewport--1024-1280 {
+    width: 79px;
+    height: 79px;
+
+    font-size: 10px;
+  }
+
   position: absolute;
   top: 50%;
   left: 50%;
-  color: $color-default-white;
-  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 110px;
   height: 110px;
+
+  color: $color-default-white;
+  font-size: 14px;
+  text-transform: uppercase;
+
   border: 1px solid $color-default-white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
 
   svg {
     @include viewport--1770 {
-      position: relative;
       top: -1px;
       left: -3px;
+
       width: 13px;
       height: 14px;
     }
-    margin-right: 5px;
+
+    @include viewport--1024-1280 {
+      top: -1px;
+
+      width: 7px;
+      height: 8px;
+    }
+    position: relative;
+
     display: block;
+    margin-right: 5px;
   }
 }

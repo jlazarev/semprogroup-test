@@ -2,6 +2,10 @@
   @include viewport--1770 {
     margin-top: 130px;
   }
+
+  @include viewport--1024-1280 {
+    margin-top: 103px;
+  }
   margin-top: 100px;
   overflow-x: hidden;
 }

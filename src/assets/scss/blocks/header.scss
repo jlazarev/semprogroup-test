@@ -3,6 +3,10 @@
     height: 130px;
   }
 
+  @include viewport--1024-1280 {
+    height: 103px;
+  }
+
   position: fixed;
   top: 0;
   right: 0;
@@ -31,6 +35,10 @@
 .header__wrapper-top {
   @include viewport--1770 {
     padding: 0 80px;
+  }
+
+  @include viewport--1024-1280 {
+    padding: 0 30px;
   }
 
   position: relative;
@@ -84,16 +92,15 @@
 }
 
 .header__block-side {
+  @include viewport--1024-1280 {
+    width: 35%;
+  }
   display: flex;
   align-items: center;
   width: 30%;
 }
 
 .header__logo {
-  @include viewport--768 {
-
-  }
-
   margin: 0 auto;
 
   svg {
@@ -115,30 +122,42 @@
       margin-left: 43px;
     }
 
+    @include viewport--1024-1280 {
+      margin-left: 25px;
+    }
+
     display: block;
-    margin-left: 39px;
     margin-bottom: 0;
+    margin-left: 39px;
   }
 }
 
 .header__menu-apart {
   @include viewport--1770 {
     height: 51px;
-    border-radius: 25.5px;
     padding: 0 25px;
+
     font-size: 15px;
+
+    border-radius: 25.5px;
   }
 
-  height: 43px;
-  border-radius: 21.5px;
-  background-color: $color-blue;
-  color: $color-default-white;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 0 21px;
-  letter-spacing: 0.07em;
+  @include viewport--1024-1280 {
+    font-size: 12px;
+  }
   display: flex;
   align-items: center;
+
+  height: 43px;
+  padding: 0 21px;
+
+  color: $color-default-white;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+
+  background-color: $color-blue;
+  border-radius: 21.5px;
 
   span {
     @include viewport--1770 {
@@ -183,16 +202,23 @@
       margin-right: 45px;
     }
 
+    @include viewport--1024-1280 {
+      margin-right: 35px;
+    }
+    margin-right: 40px;
+
     margin-bottom: 0;
     margin-left: auto;
-    margin-right: 40px;
   }
 }
 
 .header__phone-number {
   @include viewport--1770 {
     font-size: 17px;
+  }
 
+  @include viewport--1024-1280 {
+    font-size: 13px;
   }
 
   font-weight: 600;
@@ -236,10 +262,14 @@
       font-size: 15px;
     }
 
-    text-transform: uppercase;
-    font-size: 13px;
+    @include viewport--1024-1280 {
+      font-size: 12px;
+    }
     font-weight: 600;
+    font-size: 13px;
     letter-spacing: 0.07em;
+
+    text-transform: uppercase;
   }
 
   &--open {
@@ -276,6 +306,23 @@
 }
 
 .header__burger-menu {
+  @include viewport--1770 {
+    width: 38px;
+    margin-right: 15px;
+  }
+
+  @include viewport--1024-1280 {
+    top: -1px;
+
+    margin-right: 10px;
+  }
+
+  position: relative;
+
+  width: 32px;
+  height: 100px;
+  margin-right: 12px;
+
   &::before {
     @include viewport--1770 {
       width: 38px;
@@ -297,17 +344,6 @@
 
     content: '';
   }
-
-  @include viewport--1770 {
-    width: 38px;
-    margin-right: 15px;
-  }
-
-  position: relative;
-
-  width: 32px;
-  height: 100px;
-  margin-right: 12px;
 }
 
 .header__menu-top-line,
@@ -427,10 +463,8 @@
 }
 
 .header__menu-request {
-  @include viewport--768 {
-    width: 171px;
-    margin-bottom: 0;
-    margin-left: 90px;
+  @include viewport--1024-1280 {
+    width: auto;
   }
 
   @include viewport--1200 {
@@ -443,8 +477,11 @@
       display: none;
     }
   }
-
   flex-shrink: 0;
+
+  width: 171px;
+  margin-bottom: 0;
+  margin-left: 90px;
 
   color: $color-default-white;
 
@@ -456,22 +493,24 @@
       align-self: flex-start;
     }
 
-    @include viewport--1200 {
-      align-self: center;
-    }
-
     @include viewport--1770 {
       font-size: 15px;
     }
 
+    @include viewport--1024-1280 {
+      font-size: 12px;
+    }
+
     display: none;
     margin: 0;
-    color: $color-blue;
-    background-color: transparent;
     padding: 0;
+
+    color: $color-blue;
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 0.07em;
+
+    background-color: transparent;
   }
 }
 
