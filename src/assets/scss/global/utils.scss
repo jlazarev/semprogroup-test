@@ -21,6 +21,14 @@ img {
     padding: 0 30px;
   }
 
+  @include viewport--768-1023 {
+    padding: 0;
+  }
+
+  @include viewport--767 {
+    padding: 0;
+  }
+
   position: relative;
 
   display: flex;

@@ -7,6 +7,14 @@
     height: 103px;
   }
 
+  @include viewport--768-1023 {
+    height: 123px;
+  }
+
+  @include viewport--767 {
+    height: 81px;
+  }
+
   position: fixed;
   top: 0;
   right: 0;
@@ -39,6 +47,10 @@
 
   @include viewport--1024-1280 {
     padding: 0 30px;
+  }
+
+  @include viewport--767 {
+    padding: 0 20px;
   }
 
   position: relative;
@@ -92,21 +104,68 @@
 }
 
 .header__block-side {
+  @include viewport--1770 {
+    .header__block &--left {
+      width: 5.9%;
+    }
+  }
+
   @include viewport--1024-1280 {
     width: 35%;
+
+    .header__block &--left {
+      width: 8.6%;
+    }
   }
+
+  @include viewport--768-1023 {
+    .header__block &--right {
+      width: 9%;
+      order: -1;
+    }
+
+    .header__block &--left {
+      width: 21%;
+      order: -1;
+    }
+  }
+
+  @include viewport--767 {
+    .header__block &--right {
+      justify-content: flex-end;
+      width: 10%;
+    }
+
+    .header__block &--left {
+      width: 10%;
+    }
+  }
+
   display: flex;
   align-items: center;
   width: 30%;
+
+  &--left {
+    width: 6.55%;
+  }
 }
 
 .header__logo {
   margin: 0 auto;
 
+  @include viewport--768-1023 {
+    margin-top: 7px;
+  }
+
   svg {
     @include viewport--1770 {
       width: 187px;
       height: 30px;
+    }
+
+    @include viewport--767 {
+      width: 131px;
+      height: 21px;
     }
 
     width: 156px;
@@ -119,16 +178,27 @@
 
   &--top {
     @include viewport--1770 {
-      margin-left: 43px;
+      width: 24.1%;
     }
 
     @include viewport--1024-1280 {
-      margin-left: 25px;
+      width: 26.4%;
+    }
+
+    @include viewport--768-1023 {
+      order: 1;
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include viewport--767 {
+      display: none;
     }
 
     display: block;
     margin-bottom: 0;
-    margin-left: 39px;
+    width: 23.45%;
   }
 }
 
@@ -136,6 +206,8 @@
   @include viewport--1770 {
     height: 51px;
     padding: 0 25px;
+    width: 240px;
+    margin-left: 43px;
 
     font-size: 15px;
 
@@ -144,12 +216,25 @@
 
   @include viewport--1024-1280 {
     font-size: 12px;
+    margin-left: 25px;
+    width: 193px;
   }
+
+  @include viewport--768-1023 {
+    margin-left: 0;
+    font-size: 12px;
+    width: auto;
+    padding: 0 19px;
+  }
+
   display: flex;
   align-items: center;
 
   height: 43px;
   padding: 0 21px;
+  width: 204px;
+
+  margin-left: 39px;
 
   color: $color-default-white;
   font-weight: 600;
@@ -205,6 +290,15 @@
     @include viewport--1024-1280 {
       margin-right: 35px;
     }
+
+    @include viewport--768-1023 {
+      display: none;
+    }
+
+    @include viewport--767 {
+      display: none;
+    }
+
     margin-right: 40px;
 
     margin-bottom: 0;
@@ -238,6 +332,10 @@
 }
 
 .header__menu-btn {
+  @include viewport--767 {
+    height: auto;
+  }
+
   position: relative;
 
   display: flex;
@@ -265,6 +363,15 @@
     @include viewport--1024-1280 {
       font-size: 12px;
     }
+
+    @include viewport--768-1023 {
+      font-size: 12px;
+    }
+
+    @include viewport--767 {
+      display: none;
+    }
+
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 0.07em;
@@ -315,6 +422,14 @@
     top: -1px;
 
     margin-right: 10px;
+  }
+
+  @include viewport--768-1023 {
+    margin-right: 10px;
+  }
+
+  @include viewport--767 {
+    height: 81px;
   }
 
   position: relative;
@@ -467,16 +582,22 @@
     width: auto;
   }
 
-  @include viewport--1200 {
-    width: auto;
-    margin-right: 12px;
-    margin-left: 90px;
-    padding: 0 20px;
+  @include viewport--768-1023 {
+    width: 43px;
 
     span {
       display: none;
     }
   }
+
+  @include viewport--767 {
+    width: 43px;
+
+    span {
+      display: none;
+    }
+  }
+
   flex-shrink: 0;
 
   width: 171px;
@@ -501,7 +622,6 @@
       font-size: 12px;
     }
 
-    display: none;
     margin: 0;
     padding: 0;
 
@@ -511,6 +631,24 @@
     letter-spacing: 0.07em;
 
     background-color: transparent;
+  }
+}
+
+.header__icon-phone {
+  border: 1px solid $color-grey;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @include viewport--768-1023 {
+    display: flex;
+  }
+
+  @include viewport--767 {
+    display: flex;
   }
 }
 

@@ -2,7 +2,7 @@
   <div class="header__wrapper">
     <div class="header__wrapper-top">
       <div class="header__block">
-        <div class="header__block-side">
+        <div class="header__block-side header__block-side--left">
           <button class="header__menu-btn" type="button" aria-label="меню">
             <div class="header__burger-menu">
               <div class="header__menu-top-line"></div>
@@ -10,21 +10,21 @@
             </div>
             <span>меню</span>
           </button>
+        </div>
 
-          <div class="header__location header__location--top">
-            <button class="header__menu-apart btn" type="button">
-              <span>Выбрать квартиру</span>
-              <svg
-                width="12"
-                height="13"
-                viewBox="0 0 12 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <use xlink:href="#arrow-down"></use>
-              </svg>
-            </button>
-          </div>
+        <div class="header__location header__location--top">
+          <button class="header__menu-apart btn" type="button">
+            <span>Выбрать квартиру</span>
+            <svg
+              width="12"
+              height="13"
+              viewBox="0 0 12 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlink:href="#arrow-down"></use>
+            </svg>
+          </button>
         </div>
 
         <a
@@ -46,12 +46,25 @@
           </svg>
         </a>
 
-        <div class="header__block-side">
+        <div class="header__block-side header__block-side--right">
           <div class="header__phone-block header__phone-block--top">
             <span class="header__phone-number">+7 495 527 21 21</span>
           </div>
 
-          <button class="header__menu-request btn link-popup" type="button">Заказать звонок</button>
+          <button class="header__menu-request btn link-popup" type="button">
+            <span>Заказать звонок</span>
+            <div class="header__icon-phone">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
     </div>
