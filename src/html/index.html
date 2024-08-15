@@ -10,8 +10,9 @@
       === 'build') { @@include("build/assets/img/sprite/sprite_auto.svg") }
     </div>
 
+    @@include("src/html/base/header.html")
     <div class="wrapper" data-scrollbar>
-      @@include("src/html/base/header.html")
+      <!-- @@include("src/html/base/header.html") -->
 
       <main class="page-main">
         <h1 class="visually-hidden">semprogroup-test</h1>
@@ -150,96 +151,69 @@
           </div>
         </section>
       </main>
+    </div>
 
-      <div class="popup">
-        <div class="popup__wrapper popup__wrapper--form">
-          <div class="popup__block">
-            <h2 class="popup__title">Заказать звонок</h2>
+    <div class="popup">
+      <div class="popup__wrapper popup__wrapper--form">
+        <div class="popup__block">
+          <h2 class="popup__title">Заказать звонок</h2>
 
-            <div class="popup__server-error">
-              Не&nbsp;удалось отправить заявку. Повторите попытку чуть позже.
+          <div class="popup__server-error">
+            Не&nbsp;удалось отправить заявку. Повторите попытку чуть позже.
+          </div>
+
+          <form class="popup__form" method="post" novalidate id="popup-form">
+            <div class="input-box">
+              <input id="input-name" type="text" name="name" />
+              <label class="placeholder" for="input-name">Ваше имя</label>
+              <span class="error-message">Заполните поле</span>
             </div>
 
-            <form class="popup__form" method="post" novalidate id="popup-form">
-              <div class="input-box">
-                <input id="input-name" type="text" name="name" />
-                <label class="placeholder" for="input-name">Ваше имя</label>
-                <span class="error-message">Заполните поле</span>
-              </div>
+            <div class="input-box">
+              <input
+                class="_phone"
+                id="input-tel"
+                type="tel"
+                name="tel"
+                placeholder="+7 (921) 123-45-67"
+              />
+              <label class="placeholder" for="input-tel">Телефон</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
 
-              <div class="input-box">
-                <input
-                  class="_phone"
-                  id="input-tel"
-                  type="tel"
-                  name="tel"
-                  placeholder="+7 (921) 123-45-67"
-                />
-                <label class="placeholder" for="input-tel">Телефон</label>
-                <span class="error-message">Заполните поле</span>
-              </div>
+            <div class="input-box">
+              <input class="_email" id="input-email" type="email" name="email" />
+              <label class="placeholder" for="input-email">E-mail</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
 
-              <div class="input-box">
-                <input class="_email" id="input-email" type="email" name="email" />
-                <label class="placeholder" for="input-email">E-mail</label>
-                <span class="error-message">Заполните поле</span>
-              </div>
+            <!-- <div class="input-box">
+              <input id="input-company" type="text" name="company" />
+              <label class="placeholder" for="input-company">Компания</label>
+              <span class="error-message">Заполните поле</span>
+            </div>
 
-              <!-- <div class="input-box">
-                <input id="input-company" type="text" name="company" />
-                <label class="placeholder" for="input-company">Компания</label>
-                <span class="error-message">Заполните поле</span>
-              </div>
+            <div class="input-box">
+              <textarea id="input-prodject" name="prodject"></textarea>
+              <label class="placeholder" for="input-prodject">Расскажите о вашем проекте</label>
+              <span class="error-message">Заполните поле</span>
+            </div> -->
 
-              <div class="input-box">
-                <textarea id="input-prodject" name="prodject"></textarea>
-                <label class="placeholder" for="input-prodject">Расскажите о вашем проекте</label>
-                <span class="error-message">Заполните поле</span>
-              </div> -->
+            <div class="popup__description">
+              Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, вы&nbsp;ознакомлены<br> и&nbsp;подтверждаете
+              согласие с&nbsp;<a class="perso-link" href="#">политикой обработки персональных данных</a>
+            </div>
 
-              <div class="popup__description">
-                Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, вы&nbsp;ознакомлены<br> и&nbsp;подтверждаете
-                согласие с&nbsp;<a class="perso-link" href="#">политикой обработки персональных данных</a>
-              </div>
-
-              <button class="btn btn-submit g-recaptcha" type="submit">
-                <svg width="24" height="24">
-                  <use xlink:href="#ic_process"></use>
-                </svg>
-                <span class="common btn__text">
-                  <span class="btn__text-inner" data-hover="Отправить">Отправить</span>
-                </span>
-                <span class="sanding">Подождите...</span>
-              </button>
-            </form>
-
-            <button class="popup__close-btn" type="button" aria-label="закрыть">
+            <button class="btn btn-submit g-recaptcha" type="submit">
               <svg width="24" height="24">
-                <use xlink:href="#icon-close"></use>
+                <use xlink:href="#ic_process"></use>
               </svg>
+              <span class="common btn__text">
+                <span class="btn__text-inner" data-hover="Отправить">Отправить</span>
+              </span>
+              <span class="sanding">Подождите...</span>
             </button>
-          </div>
-        </div>
-
-        <div class="popup__wrapper popup__wrapper--success">
-          <div class="popup__svg-box">
-            <svg
-              width="164"
-              height="96"
-              viewBox="0 0 164 96"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use xlink:href="#ic_send-message"></use>
-            </svg>
-          </div>
-
-          <h2 class="popup__title title">Сообщение отправлено</h2>
-
-          <p class="popup__paragraph">
-            Спасибо за&nbsp;обращение.<br />
-            Наши специалисты ответят вам в&nbsp;ближайшее время
-          </p>
+          </form>
 
           <button class="popup__close-btn" type="button" aria-label="закрыть">
             <svg width="24" height="24">
@@ -247,40 +221,67 @@
             </svg>
           </button>
         </div>
+      </div>
 
-        <div class="popup__wrapper popup__wrapper--perso">
-          <h2 class="popup__title title">Согласие на&nbsp;обработку персональных данных</h2>
-
-          <p class="popup__paragraph">
-            Я&nbsp;даю свое согласие ООО &laquo;Расчетные системы&raquo; (далее&nbsp;&mdash; Сервис)
-            на&nbsp;обработку моих персональных данных, предоставленных мной Сервису в&nbsp;заявке
-            на&nbsp;сайте Сервиса, с&nbsp;использованием средств автоматизации и&nbsp;без
-            использования таковых, включая сбор, запись, систематизацию, накопление, хранение,
-            уточнение (обновление, изменение), извлечение, использование, передачу (предоставление,
-            доступ), блокирование, удаление, уничтожение персональных данных и&nbsp;иные действия,
-            предусмотренные Федеральным законом от&nbsp;27.07.2006 &#8470;&nbsp;152-ФЗ
-            &laquo;О&nbsp;персональных данных&raquo; в&nbsp;целях осуществления связи со&nbsp;мной
-            для предоставления информации об&nbsp;услугах Сервиса.
-          </p>
-
-          <p class="popup__paragraph">
-            Предоставленные Сервису через заявку персональные данные подлежат уничтожению
-            по&nbsp;достижению указанных целей обработки или в&nbsp;случае утраты необходимости
-            в&nbsp;достижении этих целей.
-          </p>
-
-          <p class="popup__paragraph">
-            Я&nbsp;понимаю и&nbsp;соглашаюсь с&nbsp;тем, что для прекращения использования моих
-            персональных данных, мне необходимо обратиться к&nbsp;Сервису для оформления отзыва
-            согласия на&nbsp;обработку моих персональных данных.
-          </p>
-
-          <button class="popup__back-btn back-btn" type="button" aria-label="назад">
-            <svg width="24" height="24">
-              <use xlink:href="#icon_back"></use>
-            </svg>
-          </button>
+      <div class="popup__wrapper popup__wrapper--success">
+        <div class="popup__svg-box">
+          <svg
+            width="164"
+            height="96"
+            viewBox="0 0 164 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="#ic_send-message"></use>
+          </svg>
         </div>
+
+        <h2 class="popup__title title">Сообщение отправлено</h2>
+
+        <p class="popup__paragraph">
+          Спасибо за&nbsp;обращение.<br />
+          Наши специалисты ответят вам в&nbsp;ближайшее время
+        </p>
+
+        <button class="popup__close-btn" type="button" aria-label="закрыть">
+          <svg width="24" height="24">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="popup__wrapper popup__wrapper--perso">
+        <h2 class="popup__title title">Согласие на&nbsp;обработку персональных данных</h2>
+
+        <p class="popup__paragraph">
+          Я&nbsp;даю свое согласие ООО &laquo;Расчетные системы&raquo; (далее&nbsp;&mdash; Сервис)
+          на&nbsp;обработку моих персональных данных, предоставленных мной Сервису в&nbsp;заявке
+          на&nbsp;сайте Сервиса, с&nbsp;использованием средств автоматизации и&nbsp;без
+          использования таковых, включая сбор, запись, систематизацию, накопление, хранение,
+          уточнение (обновление, изменение), извлечение, использование, передачу (предоставление,
+          доступ), блокирование, удаление, уничтожение персональных данных и&nbsp;иные действия,
+          предусмотренные Федеральным законом от&nbsp;27.07.2006 &#8470;&nbsp;152-ФЗ
+          &laquo;О&nbsp;персональных данных&raquo; в&nbsp;целях осуществления связи со&nbsp;мной
+          для предоставления информации об&nbsp;услугах Сервиса.
+        </p>
+
+        <p class="popup__paragraph">
+          Предоставленные Сервису через заявку персональные данные подлежат уничтожению
+          по&nbsp;достижению указанных целей обработки или в&nbsp;случае утраты необходимости
+          в&nbsp;достижении этих целей.
+        </p>
+
+        <p class="popup__paragraph">
+          Я&nbsp;понимаю и&nbsp;соглашаюсь с&nbsp;тем, что для прекращения использования моих
+          персональных данных, мне необходимо обратиться к&nbsp;Сервису для оформления отзыва
+          согласия на&nbsp;обработку моих персональных данных.
+        </p>
+
+        <button class="popup__back-btn back-btn" type="button" aria-label="назад">
+          <svg width="24" height="24">
+            <use xlink:href="#icon_back"></use>
+          </svg>
+        </button>
       </div>
     </div>
 

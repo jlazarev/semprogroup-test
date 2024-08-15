@@ -181,6 +181,18 @@
 }
 
 .popup__block {
+  @include viewport--1770 {
+    width: 586px;
+  }
+
+  @include viewport--1280 {
+    width: 370px;
+  }
+
+  @include viewport--768-1023 {
+    width: 438px;
+  }
+
   width: 454px;
 }
 
@@ -223,6 +235,25 @@
 }
 
 .popup__title {
+  @include viewport--1770 {
+    font-size: 52px;
+    margin-bottom: 60px;
+  }
+
+  @include viewport--1280 {
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 28px;
+  }
+
+  @include viewport--767 {
+    font-size: 20px;
+    margin-bottom: 3px;
+    margin-top: 4px;
+    text-align: left;
+    margin-left: 10px;
+  }
+
   margin-top: 0;
   margin-bottom: 32px;
 
@@ -238,6 +269,14 @@
   flex-direction: column;
 
   .input-box {
+    @include viewport--1770 {
+      margin-bottom: 33px;
+    }
+
+    @include viewport--767 {
+      margin-bottom: 14px;
+    }
+
     position: relative;
 
     margin-bottom: 24px;
@@ -318,6 +357,10 @@
     }
 
     &:focus + .placeholder {
+      @include viewport--767 {
+        top: 9px;
+      }
+
       top: 3px;
       left: 0;
 
@@ -326,6 +369,20 @@
   }
 
   .placeholder {
+    @include viewport--1770 {
+      font-size: 17px;
+    }
+
+    @include viewport--1280 {
+      font-size: 14px;
+      top: 22px;
+    }
+
+    @include viewport--767 {
+      font-size: 11px;
+      top: 27px;
+    }
+
     position: absolute;
     top: 19px;
     left: 0;
@@ -363,6 +420,23 @@
   }
 
   button {
+    @include viewport--1770 {
+      font-size: 15px;
+      width: 234px;
+      height: 63px;
+      margin-bottom: 1px;
+    }
+
+    @include viewport--1280 {
+      width: 170px;
+      height: 54px;
+    }
+
+    @include viewport--767 {
+      height: 47px;
+      font-size: 11px;
+    }
+
     margin: 0 auto 4px;
     width: 228px;
     height: 62px;
@@ -377,9 +451,32 @@
 }
 
 .popup__description {
+  @include viewport--1770 {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 31px;
+  }
+
+  @include viewport--1280 {
+    font-size: 11px;
+    margin-top: 24px;
+    margin-bottom: 31px;
+    line-height: 160%;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include viewport--767 {
+    font-size: 12px;
+    margin-bottom: 19px;
+    margin-top: 26px;
+  }
+
   color: #00000080;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 140%;
   text-align: center;
   margin-top: 27px;
   margin-bottom: 31px;
@@ -421,6 +518,11 @@
 }
 
 .popup__close-btn {
+  @include viewport--767 {
+    right: 15px;
+    top: 20px;
+  }
+
   position: absolute;
   right: 57px;
   top: 60px;
