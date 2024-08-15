@@ -1,8 +1,4 @@
 .popup {
-  @include viewport--576 {
-    padding: 16px 0;
-  }
-
   position: fixed;
   inset: 0;
 
@@ -28,7 +24,7 @@
     animation: show 0.6s;
 
     .popup__wrapper {
-      transform: translateY(0);
+      // transform: translateY(0);
     }
   }
 
@@ -38,20 +34,6 @@
 }
 
 .popup__wrapper {
-  @include viewport--576 {
-    width: 560px;
-    min-height: 784px;
-    padding: 41px 40px 30px;
-
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba($color-default-black, 0.5);
-  }
-
-  @include viewport--1920 {
-    width: 772px;
-    padding: 53px 56px 40px;
-  }
-
   position: relative;
 
   width: 100%;
@@ -59,9 +41,12 @@
   margin: auto;
   padding: 21px 20px;
   overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: $color-default-white;
-  transform: translateY(1000px);
+  // transform: translateY(1000px);
 
   transition: transform 0.6s;
 
@@ -133,27 +118,11 @@
   }
 
   &--success {
-    @include viewport--576 {
-      min-height: auto;
-    }
-
     display: none;
     height: 100vh;
     min-height: 100vh;
 
     &.show {
-      @include viewport--576 {
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: auto;
-        min-height: 325px;
-        max-height: none;
-      }
-
-      @include viewport--1920 {
-        padding: 56px 56px 50px;
-      }
-
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -161,10 +130,6 @@
     }
 
     .popup__title {
-      @include viewport--1920 {
-        margin-bottom: 24px;
-      }
-
       margin-right: 0;
       margin-bottom: 16px;
 
@@ -172,23 +137,11 @@
     }
 
     .popup__paragraph {
-      @include viewport--576 {
-        text-align: start;
-      }
-
       text-align: center;
     }
   }
 
   &--perso {
-    @include viewport--576 {
-      min-height: auto;
-    }
-
-    @include viewport--1920 {
-      padding: 56px 56px 40px;
-    }
-
     display: none;
 
     &.show {
@@ -227,6 +180,10 @@
   }
 }
 
+.popup__block {
+  width: 454px;
+}
+
 .popup__server-error {
   display: none;
   max-width: 380px;
@@ -242,7 +199,7 @@
   }
 
   .common {
-    display: inline;
+    display: inline-block;
   }
 
   .sanding {
@@ -266,19 +223,14 @@
 }
 
 .popup__title {
-  @include viewport--1920 {
-    margin-bottom: 24px;
+  margin-top: 0;
+  margin-bottom: 32px;
 
-    font-size: 28px;
-    line-height: 40px;
-  }
-
-  margin: 0;
-  margin-right: 30px;
-  margin-bottom: 28px;
-
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .popup__form {
@@ -286,13 +238,9 @@
   flex-direction: column;
 
   .input-box {
-    @include viewport--1920 {
-      margin-bottom: 22px;
-    }
-
     position: relative;
 
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 
     .error-message {
       @include viewport--1920 {
@@ -345,23 +293,14 @@
 
   input,
   textarea {
-    @include viewport--1920 {
-      height: 80px;
-      padding: 23px 24px 0;
-
-      font-size: 20px;
-      line-height: 32px;
-    }
-
     width: 100%;
-    height: 60px;
-    padding: 19px 20px 0;
+    height: 49px;
+    padding: 19px 0 0;
 
     font-size: 15px;
 
-    background-color: $color-grey-light;
     border: none;
-    border-radius: 12px;
+    border-bottom: 1px solid #00000033;
 
     &::placeholder {
       color: $color-grey;
@@ -370,7 +309,8 @@
     }
 
     &:focus {
-      outline: 1px solid $color-default-black;
+      // outline: 1px solid $color-default-black;
+      outline: 0;
 
       &::placeholder {
         opacity: 1;
@@ -378,39 +318,32 @@
     }
 
     &:focus + .placeholder {
-      top: 9px;
-      left: 13px;
+      top: 3px;
+      left: 0;
 
-      transform: scale(0.8);
+      transform: scale(0.7) translateX(-19%);
     }
   }
 
   .placeholder {
-    @include viewport--1920 {
-      top: 24px;
-      left: 24px;
-
-      font-size: 20px;
-      line-height: 32px;
-    }
-
     position: absolute;
     top: 19px;
-    left: 20px;
+    left: 0;
 
-    color: $color-grey;
-    font-size: 15px;
-    line-height: 22px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: uppercase;
 
     cursor: text;
 
     transition: all 0.3s;
 
     &--active {
-      top: 9px;
-      left: 13px;
+      top: 3px;
+      left: 0;
 
-      transform: scale(0.8);
+      transform: scale(0.7) translateX(-19%);
     }
   }
 
@@ -430,43 +363,29 @@
   }
 
   button {
-    @include viewport--576 {
-      width: 312px;
-      height: 56px;
+    margin: 0 auto 4px;
+    width: 228px;
+    height: 62px;
 
-      font-size: 20px;
-      line-height: 24px;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 600;
+    letter-spacing: 0.07em;
 
-      border-radius: 28px;
-    }
-
-    @include viewport--1920 {
-      height: 68px;
-      margin-bottom: 80px;
-
-      font-size: 24px;
-      line-height: 28px;
-
-      border-radius: 34px;
-    }
-
-    margin-bottom: 56px;
+    border-radius: 31px;
   }
 }
 
 .popup__description {
-  @include viewport--1920 {
-    padding-right: 100px;
-
-    font-size: 15px;
-    line-height: 22px;
-  }
-
-  color: $color-muted;
+  color: #00000080;
   font-size: 12px;
   line-height: 16px;
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 31px;
 
   a {
+    color: #00000080;
     text-decoration: underline;
   }
 }
@@ -502,24 +421,9 @@
 }
 
 .popup__close-btn {
-  @include viewport--576 {
-    top: 27px;
-    right: 30px;
-  }
-
-  @include viewport--1920 {
-    top: 48px;
-    right: 44px;
-
-    svg {
-      width: 27px;
-      height: 27px;
-    }
-  }
-
   position: absolute;
-  top: 15px;
-  right: 10px;
+  right: 57px;
+  top: 60px;
 
   color: $color-grey;
 

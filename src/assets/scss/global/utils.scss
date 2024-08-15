@@ -37,6 +37,10 @@ img {
   padding: 0 40px;
   overflow-x: hidden;
 
+  // width: 100vw;
+  // height: 100vh;
+  // overflow: hidden;
+
   .header,
   .footer {
     flex-shrink: 0;
@@ -105,21 +109,45 @@ img {
   max-width: 500px;
   height: 54px;
 
-  color: $color-default-black;
+  color: $color-default-white;
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.028em;
 
   text-transform: uppercase;
 
-  background-color: $color-yellow;
+  background-color: $color-blue;
   border: none;
   border-radius: 8px;
 
   transition: all 0.3s;
 
+  span {
+    transition: all 0.3s;
+  }
+
   &:hover {
-    background-color: $color-red-hover;
+    .btn__text-inner {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.btn__text {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.btn__text-inner {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: attr(data-hover);
+    left: 0;
+    display: inline-block;
+    transform: translateY(100%);
   }
 }
 

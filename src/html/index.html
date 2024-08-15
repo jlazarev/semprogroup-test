@@ -4,13 +4,13 @@
     @@include("src/html/base/head.html")
     <title>semprogroup-test</title>
   </head>
-  <body class="page-body">
+  <body class="page-body" >
     <div style="display: none">
       @@if (path === 'public') { @@include("public/assets/img/sprite/sprite_auto.svg") } @@if (path
       === 'build') { @@include("build/assets/img/sprite/sprite_auto.svg") }
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" data-scrollbar>
       @@include("src/html/base/header.html")
 
       <main class="page-main">
@@ -153,68 +153,72 @@
 
       <div class="popup">
         <div class="popup__wrapper popup__wrapper--form">
-          <h2 class="popup__title title">Заявка на&nbsp;звонок</h2>
+          <div class="popup__block">
+            <h2 class="popup__title">Заказать звонок</h2>
 
-          <div class="popup__server-error">
-            Не&nbsp;удалось отправить заявку. Повторите попытку чуть позже.
-          </div>
-
-          <form class="popup__form" method="post" novalidate id="popup-form">
-            <div class="input-box">
-              <input id="input-name" type="text" name="name" />
-              <label class="placeholder" for="input-name">Ваше имя</label>
-              <span class="error-message">Заполните поле</span>
+            <div class="popup__server-error">
+              Не&nbsp;удалось отправить заявку. Повторите попытку чуть позже.
             </div>
 
-            <div class="input-box">
-              <input
-                class="_phone"
-                id="input-tel"
-                type="tel"
-                name="tel"
-                placeholder="+7 921 123-45-67"
-              />
-              <label class="placeholder" for="input-tel">Телефон</label>
-              <span class="error-message">Заполните поле</span>
-            </div>
+            <form class="popup__form" method="post" novalidate id="popup-form">
+              <div class="input-box">
+                <input id="input-name" type="text" name="name" />
+                <label class="placeholder" for="input-name">Ваше имя</label>
+                <span class="error-message">Заполните поле</span>
+              </div>
 
-            <div class="input-box">
-              <input class="_email" id="input-email" type="email" name="email" />
-              <label class="placeholder" for="input-email">E-mail</label>
-              <span class="error-message">Заполните поле</span>
-            </div>
+              <div class="input-box">
+                <input
+                  class="_phone"
+                  id="input-tel"
+                  type="tel"
+                  name="tel"
+                  placeholder="+7 (921) 123-45-67"
+                />
+                <label class="placeholder" for="input-tel">Телефон</label>
+                <span class="error-message">Заполните поле</span>
+              </div>
 
-            <div class="input-box">
-              <input id="input-company" type="text" name="company" />
-              <label class="placeholder" for="input-company">Компания</label>
-              <span class="error-message">Заполните поле</span>
-            </div>
+              <div class="input-box">
+                <input class="_email" id="input-email" type="email" name="email" />
+                <label class="placeholder" for="input-email">E-mail</label>
+                <span class="error-message">Заполните поле</span>
+              </div>
 
-            <div class="input-box">
-              <textarea id="input-prodject" name="prodject"></textarea>
-              <label class="placeholder" for="input-prodject">Расскажите о вашем проекте</label>
-              <span class="error-message">Заполните поле</span>
-            </div>
+              <!-- <div class="input-box">
+                <input id="input-company" type="text" name="company" />
+                <label class="placeholder" for="input-company">Компания</label>
+                <span class="error-message">Заполните поле</span>
+              </div>
 
-            <button class="btn btn-submit g-recaptcha" type="submit">
+              <div class="input-box">
+                <textarea id="input-prodject" name="prodject"></textarea>
+                <label class="placeholder" for="input-prodject">Расскажите о вашем проекте</label>
+                <span class="error-message">Заполните поле</span>
+              </div> -->
+
+              <div class="popup__description">
+                Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, вы&nbsp;ознакомлены<br> и&nbsp;подтверждаете
+                согласие с&nbsp;<a class="perso-link" href="#">политикой обработки персональных данных</a>
+              </div>
+
+              <button class="btn btn-submit g-recaptcha" type="submit">
+                <svg width="24" height="24">
+                  <use xlink:href="#ic_process"></use>
+                </svg>
+                <span class="common btn__text">
+                  <span class="btn__text-inner" data-hover="Отправить">Отправить</span>
+                </span>
+                <span class="sanding">Подождите...</span>
+              </button>
+            </form>
+
+            <button class="popup__close-btn" type="button" aria-label="закрыть">
               <svg width="24" height="24">
-                <use xlink:href="#ic_process"></use>
+                <use xlink:href="#icon-close"></use>
               </svg>
-              <span class="common">Оставить заявку</span>
-              <span class="sanding">Подождите...</span>
             </button>
-          </form>
-
-          <div class="popup__description">
-            Нажимая кнопку &laquo;Оставить заявку&raquo; вы&nbsp;принимаете
-            <a class="perso-link" href="#">условия хранения и&nbsp;обработки персональных данных</a>
           </div>
-
-          <button class="popup__close-btn" type="button" aria-label="закрыть">
-            <svg width="24" height="24">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
         </div>
 
         <div class="popup__wrapper popup__wrapper--success">

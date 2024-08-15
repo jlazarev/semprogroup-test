@@ -18,7 +18,7 @@ inputContainers.forEach(container => {
 // Отправка данных
 const EMAIL_REGEXP =
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-const PHONE_REGEXP = /^\+7 [0-9][0-9][0-9] [0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$/iu;
+const PHONE_REGEXP = /^\+7 \([0-9][0-9][0-9]\) [0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$/iu;
 
 const popup = document.querySelector('.popup');
 const popupIn = popup.querySelector('.popup__wrapper--form');
@@ -30,7 +30,18 @@ const popupSuccess = popup.querySelector('.popup__wrapper--success');
  */
 const URL_UPLOAD = 'https://kazna.tprs.ru/form';
 
-form.addEventListener('submit', formSendHandle);
+form.addEventListener('submit', imitSendHandler);
+
+// Для вывода в консоль данных формы
+async function imitSendHandler(evt) {
+  evt.preventDefault();
+
+  const formData = new FormData(form);
+
+  for(let [name, value] of formData) {
+    console.log(`${name} = ${value}`);
+  }
+}
 
 async function formSendHandle(evt) {
   evt.preventDefault();
@@ -186,5 +197,5 @@ function blurInputWithValidationHandler(input, regExp) {
 
 // Устанавливаем маску для телефона
 IMask(document.getElementById('input-tel'), {
-  mask: '+{7} 000 000-00-00',
+  mask: '+{7} (000) 000-00-00',
 });

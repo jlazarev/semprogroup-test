@@ -55,5 +55,8 @@
         "stylelint-order": "6.0.3",
         "stylelint-scss": "5.2.1",
         "webpack-stream": "^7.0.0"
+    },
+    "dependencies": {
+        "smooth-scrollbar": "^8.8.4"
     }
 }

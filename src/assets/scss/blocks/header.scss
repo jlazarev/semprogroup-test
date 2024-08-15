@@ -249,7 +249,7 @@
       margin-right: 13px;
     }
 
-    margin-right: 8px;
+    margin-right: 4px;
   }
 }
 
@@ -289,6 +289,7 @@
 
     @include viewport--1024-1280 {
       margin-right: 35px;
+      top: 0;
     }
 
     @include viewport--768-1023 {
@@ -303,6 +304,8 @@
 
     margin-bottom: 0;
     margin-left: auto;
+    position: relative;
+    top: 1px
   }
 }
 
@@ -347,11 +350,11 @@
   border: none;
 
   &:hover {
-    & .header__burger-menu::before,
-    & .header__burger-menu::after,
-    .header__menu-top-line,
+    .header__menu-top-line {
+      top: -7px;
+    }
     .header__menu-bottom-line {
-      background-color: $color-default-black;
+      top: 7px;
     }
   }
 
@@ -392,6 +395,13 @@
     .header__menu-bottom-line {
       animation: menu-open-down 0.5s;
       animation-fill-mode: forwards;
+    }
+
+    &:hover {
+      .header__menu-top-line,
+      .header__menu-bottom-line {
+        top: 0;
+      }
     }
   }
 
@@ -473,6 +483,7 @@
   width: 32px;
   height: 2px;
   margin: auto;
+  transition: top 0.3s;
 
   background-color: $color-blue;
   opacity: 1;
@@ -492,27 +503,28 @@
     left: auto;
 
     width: 100%;
-    padding: 28px 20px 40px;
+    padding: 28px 40px 40px;
+    overflow: auto;
   }
 
-  @include viewport--1200 {
-    position: static;
+  // @include viewport--1200 {
+  //   position: static;
 
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    width: auto;
-    margin-right: 36px;
-    padding: 0;
+  //   display: none;
+  //   flex-direction: row;
+  //   align-items: center;
+  //   width: auto;
+  //   margin-right: 36px;
+  //   padding: 0;
 
-    border-radius: 0;
-    box-shadow: none;
-    transform: none;
-  }
+  //   border-radius: 0;
+  //   box-shadow: none;
+  //   transform: none;
+  // }
 
-  @include viewport--1200 {
-    margin-right: 34px;
-  }
+  // @include viewport--1200 {
+  //   margin-right: 34px;
+  // }
 
   position: absolute;
   top: 80px;
@@ -522,7 +534,7 @@
   display: flex;
   flex-direction: column;
   max-height: calc(100vh - 80px);
-  padding: 20px 17px 40px;
+  padding: 20px 40px 40px;
   overflow: scroll;
 
   background-color: rgba($color-default-white, 1);
@@ -564,7 +576,7 @@
     }
 
     @include viewport--1200 {
-      margin-left: 29px;
+      margin-left: 0px;
     }
 
     margin-bottom: 8px;
@@ -578,6 +590,10 @@
 }
 
 .header__menu-request {
+  @include viewport--1770 {
+    width: auto;
+  }
+
   @include viewport--1024-1280 {
     width: auto;
   }
@@ -600,7 +616,7 @@
 
   flex-shrink: 0;
 
-  width: 171px;
+  width: 135px;
   margin-bottom: 0;
   margin-left: 90px;
 
@@ -608,12 +624,12 @@
 
   background-color: $color-red;
 
-  .header__block & {
-    @include viewport--768 {
-      display: block;
-      align-self: flex-start;
-    }
+  .btn__text {
+    top: 3px;
+    position: relative;
+  }
 
+  .header__block & {
     @include viewport--1770 {
       font-size: 15px;
     }
