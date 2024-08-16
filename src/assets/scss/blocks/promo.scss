@@ -5,9 +5,10 @@
   }
 
   @include viewport--767 {
-    height: calc(100vh - 81px);
+    min-height: calc(100% - 81px);
     padding: 0 20px;
   }
+
   height: calc(100vh - 100px);
 }
 
