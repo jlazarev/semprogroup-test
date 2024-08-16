@@ -36,16 +36,18 @@
 .popup__wrapper {
   position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
   min-height: 100vh;
   margin: auto;
   padding: 21px 20px;
   overflow-y: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   background-color: $color-default-white;
+
   // transform: translateY(1000px);
 
   transition: transform 0.6s;
@@ -62,7 +64,6 @@
     &._sending {
       &::after {
         position: absolute;
-        inset: 0;
 
         z-index: 100;
 
@@ -70,6 +71,7 @@
         opacity: 0.6;
 
         content: '';
+        inset: 0;
       }
 
       .btn-submit {
@@ -236,32 +238,36 @@
 
 .popup__title {
   @include viewport--1770 {
-    font-size: 52px;
     margin-bottom: 60px;
+
+    font-size: 52px;
   }
 
   @include viewport--1280 {
+    margin-bottom: 28px;
+
     font-size: 28px;
     line-height: 140%;
-    margin-bottom: 28px;
   }
 
   @include viewport--767 {
-    font-size: 20px;
-    margin-bottom: 3px;
     margin-top: 4px;
-    text-align: left;
+    margin-bottom: 3px;
     margin-left: 10px;
+
+    font-size: 20px;
+    text-align: left;
   }
 
   margin-top: 0;
   margin-bottom: 32px;
 
+  font-weight: 400;
+
   font-size: 40px;
   line-height: 120%;
-  font-weight: 400;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .popup__form {
@@ -374,13 +380,15 @@
     }
 
     @include viewport--1280 {
-      font-size: 14px;
       top: 22px;
+
+      font-size: 14px;
     }
 
     @include viewport--767 {
-      font-size: 11px;
       top: 27px;
+
+      font-size: 11px;
     }
 
     position: absolute;
@@ -421,10 +429,11 @@
 
   button {
     @include viewport--1770 {
-      font-size: 15px;
       width: 234px;
       height: 63px;
       margin-bottom: 1px;
+
+      font-size: 15px;
     }
 
     @include viewport--1280 {
@@ -434,16 +443,18 @@
 
     @include viewport--767 {
       height: 47px;
+
       font-size: 11px;
     }
-
-    margin: 0 auto 4px;
     width: 228px;
     height: 62px;
 
+    margin: 0 auto 4px;
+
+    font-weight: 600;
+
     font-size: 14px;
     line-height: 100%;
-    font-weight: 600;
     letter-spacing: 0.07em;
 
     border-radius: 31px;
@@ -452,15 +463,17 @@
 
 .popup__description {
   @include viewport--1770 {
-    font-size: 14px;
     margin-top: 20px;
     margin-bottom: 31px;
+
+    font-size: 14px;
   }
 
   @include viewport--1280 {
-    font-size: 11px;
     margin-top: 24px;
     margin-bottom: 31px;
+
+    font-size: 11px;
     line-height: 160%;
 
     br {
@@ -469,17 +482,18 @@
   }
 
   @include viewport--767 {
-    font-size: 12px;
-    margin-bottom: 19px;
     margin-top: 26px;
+    margin-bottom: 19px;
+
+    font-size: 12px;
   }
+  margin-top: 27px;
+  margin-bottom: 31px;
 
   color: #00000080;
   font-size: 12px;
   line-height: 140%;
   text-align: center;
-  margin-top: 27px;
-  margin-bottom: 31px;
 
   a {
     color: #00000080;
@@ -519,13 +533,13 @@
 
 .popup__close-btn {
   @include viewport--767 {
-    right: 15px;
     top: 20px;
+    right: 15px;
   }
 
   position: absolute;
-  right: 57px;
   top: 60px;
+  right: 57px;
 
   color: $color-grey;
 

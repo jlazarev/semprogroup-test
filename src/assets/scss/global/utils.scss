@@ -22,12 +22,12 @@ img {
 
   display: flex;
   flex-direction: column;
-  min-height: calc(100 * var(--vh, 1vh));
-  overflow-x: hidden;
 
   width: 100vw;
   height: 100vh;
+  min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
+  overflow-x: hidden;
 
   .header,
   .footer {
@@ -127,15 +127,19 @@ img {
 }
 
 .btn__text-inner {
-  display: inline-block;
   position: relative;
+
+  display: inline-block;
 
   &::after {
     position: absolute;
-    content: attr(data-hover);
     left: 0;
+
     display: inline-block;
+
     transform: translateY(100%);
+
+    content: attr(data-hover);
   }
 }
 

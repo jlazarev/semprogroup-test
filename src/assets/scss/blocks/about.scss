@@ -16,13 +16,15 @@
   }
 
   @include viewport--768-1023 {
-    font-size: 11px;
     margin: 31px 0 16px;
+
+    font-size: 11px;
   }
 
   @include viewport--767 {
-    font-size: 11px;
     margin: 33px 0 7px;
+
+    font-size: 11px;
   }
 
   display: flex;
@@ -37,12 +39,11 @@
 }
 
 .about__block {
-  display: flex;
-  justify-content: space-between;
-
   @include viewport--767 {
     flex-direction: column;
   }
+  display: flex;
+  justify-content: space-between;
 }
 
 .about__box {
@@ -394,8 +395,8 @@
 
   &:hover {
     .about__btn-inner {
-      transform: scale(1.2) translate(-42%, -42%);
       background-color: rgba($color-default-white, 0.3);
+      transform: scale(1.2) translate(-42%, -42%);
     }
   }
 }

@@ -4,19 +4,19 @@ const body = document.querySelector('.page-body');
 
 if (modalVideo) {
   const modalIn = modalVideo.querySelector('.video__wrapper');
-  const video = modalIn.querySelector("#video");
+  const video = modalIn.querySelector('#video');
 
   videoBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalVideo.classList.add('video--open');
 
     if (video.requestFullscreen) {
-        video.requestFullscreen(); // Chrome
+      video.requestFullscreen(); // Chrome
     } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen(); // Safari
+      video.webkitRequestFullscreen(); // Safari
     } else if (video.msRequestFullscreen) {
-        video.msRequestFullscreen(); // IE/Edge
-    };
+      video.msRequestFullscreen(); // IE/Edge
+    }
 
     video.play();
   });

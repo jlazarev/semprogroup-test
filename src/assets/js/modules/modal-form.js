@@ -38,7 +38,7 @@ async function imitSendHandler(evt) {
 
   const formData = new FormData(form);
 
-  for(let [name, value] of formData) {
+  for (let [name, value] of formData) {
     console.log(`${name} = ${value}`);
   }
 }

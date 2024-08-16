@@ -1,15 +1,16 @@
 .video {
   position: fixed;
-  inset: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   z-index: -1001;
 
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: rgba($color-default-black, 0.7);
+
+  opacity: 0;
+  inset: 0;
 
   &--open {
     z-index: 1001;

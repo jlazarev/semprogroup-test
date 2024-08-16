@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "api_version": 1,
+  "layout": {
+    "logo": "https://kazna.tprs.ru/assets/img/site-icons/yandex_browser/kazna-logo_150x60.png",
+    "color": "#ffffff",
+    "show_title": false
+  }
+}

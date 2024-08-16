@@ -1,6 +1,4 @@
 .promo {
-  height: calc(100vh - 100px);
-
   @include viewport--768-1023 {
     height: calc(100vh - 123px);
     padding: 0 40px;
@@ -10,6 +8,7 @@
     height: calc(100vh - 81px);
     padding: 0 20px;
   }
+  height: calc(100vh - 100px);
 }
 
 .promo__img-box {
@@ -27,8 +26,8 @@
   }
 
   @include viewport--767 {
-    margin-bottom: 21px;
     height: calc(100% - 150px);
+    margin-bottom: 21px;
   }
 
   height: calc(100% - 243px);
@@ -42,10 +41,6 @@
 }
 
 .promo__info-box {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
   @include viewport--768-1023 {
     flex-direction: column;
     align-items: flex-start;
@@ -55,6 +50,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .promo__description {
@@ -78,9 +76,10 @@
   }
 
   @include viewport--767 {
+    margin-bottom: 20px;
+
     font-size: 13px;
     line-height: 150%;
-    margin-bottom: 20px;
   }
 
   max-width: 400px;
