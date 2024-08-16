@@ -4,7 +4,7 @@ const body = document.querySelector('.page-body');
 const navToggle = document.querySelector('.header__menu-btn');
 const menu = document.querySelector('.header__menu');
 
-let reCaptcha;
+// let reCaptcha;
 
 if (popup) {
   const popupIn = popup.querySelector('.popup__wrapper--form');
@@ -36,8 +36,8 @@ if (popup) {
       navToggle.classList.remove('header__menu-btn--open');
       navToggle.classList.add('header__menu-btn--close');
 
-      reCaptcha = document.querySelector('.grecaptcha-badge');
-      reCaptcha.classList.add('grecaptcha-badge--active');
+      // reCaptcha = document.querySelector('.grecaptcha-badge');
+      // reCaptcha.classList.add('grecaptcha-badge--active');
     });
   });
 
@@ -67,7 +67,7 @@ if (popup) {
     popup.classList.remove('popup--open');
     popup.classList.add('popup--close');
     body.classList.remove('page-body--no-scroll');
-    reCaptcha.classList.remove('grecaptcha-badge--active');
+    // reCaptcha.classList.remove('grecaptcha-badge--active');
     setTimeout(() => {
       popupIn.classList.remove('hide');
       popupIn.classList.remove('_error');

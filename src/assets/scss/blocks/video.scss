@@ -1,0 +1,19 @@
+.video {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: -1001;
+
+  opacity: 0;
+  background-color: rgba($color-default-black, 0.7);
+
+  &--open {
+    z-index: 1001;
+
+    opacity: 1;
+  }
+}

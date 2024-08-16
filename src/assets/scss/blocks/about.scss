@@ -391,6 +391,13 @@
   background-color: transparent;
   border: none;
   border-radius: 50%;
+
+  &:hover {
+    .about__btn-inner {
+      transform: scale(1.2) translate(-42%, -42%);
+      background-color: rgba($color-default-white, 0.3);
+    }
+  }
 }
 
 .about__btn-inner {
@@ -439,6 +446,8 @@
   border: 1px solid $color-default-white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+
+  transition: all 0.2s;
 
   svg {
     @include viewport--1770 {

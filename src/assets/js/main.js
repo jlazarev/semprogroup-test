@@ -7,6 +7,7 @@ import './modules/login-popup.js';
 import './modules/arrow.js';
 import './modules/modal-form.js';
 import './modules/init-scrollbar.js';
+import './modules/modal-video.js';
 
 // import './modules/init-swiper.js';
 // import './modules/payments.js';
